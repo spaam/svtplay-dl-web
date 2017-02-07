@@ -1,0 +1,8 @@
+---
+layout: posts
+title:  0.10.2015.01.28
+date:   2015-01-28 22:34:42
+categories: releases
+---
+
+[7b0ff94](https://github.com/spaam/svtplay-dl/commit/7b0ff94) service: support for HDS and HLS stream playlists.

@@ -1,0 +1,24 @@
+---
+layout: default
+title: archive
+---
+
+<div class="col-md-10">
+    <h2>Archive</h2>
+    <div class="row">
+        <div class="col-md-4"><p>Latest</p></div>
+        <div class="col-md-3"><a href="/download/latest/svtplay-dl">download</a></div>
+        <div class="col-md-3"><a href="/download/latest/svtplay-dl.exe">Windows</a></div>
+    </div>
+    {% for post in site.posts %}
+    <div class="row">
+        <div class="col-md-4"><p>{{ post.title }}</p></div>
+        <div class="col-md-3"><a href="/download/{{ post.title }}/svtplay-dl">download</a></div>
+        {% if post.windows %}
+        <div class="col-md-3"><a href="/download/{{ post.title }}/svtplay-dl.exe">Windows</a></div>
+        {% else %}
+        <div class="col-md-3"></div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,8 @@
+---
+layout: posts
+title:  0.10.2014.12.26
+date:   2014-12-26 00:41:22
+categories: releases
+---
+
+[29e52a4](https://github.com/spaam/svtplay-dl/commit/29e52a4) options: dont start at zero.
