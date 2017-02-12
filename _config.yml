@@ -29,9 +29,13 @@ markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
+  - download
+  - README.md
+  - LICENSE
 
 permalink:  /:title/
 paginate: 5
