@@ -7,7 +7,7 @@ windows: true
 binary: true
 ---
 
-cmore: added a support.
+cmore: added support.
 svtplay: fixed so -A works again.
 disney: fixed a support for it again.
 tv4play: use webvtt subtitles instead of smi.
