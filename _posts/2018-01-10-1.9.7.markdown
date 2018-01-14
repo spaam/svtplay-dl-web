@@ -1,0 +1,22 @@
+---
+layout: posts
+title:  1.9.7
+date:   2018-01-10 00:26:42
+categories: releases
+windows: true
+binary: true
+---
+
+HLS live support for svtplay and dplay channels.
+  by default it will record until you press ctrl + c.
+  using the argument -c XXX  replace XXX with minutes to record.  
+Added support for barnkanalen.se
+Added support for sportlib
+Added support for proxy
+  --proxy=socks5://localhost:18888
+Removed stdout output
+cmore: detect id number better
+viaplay: fixed an issue when trying to read json data.
+svtplay: fixed sorting when using -A
+expressen: fixed an issue when they started to use https
+urplay/urskola: fixed an issue when they started to use https
