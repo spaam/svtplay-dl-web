@@ -1,52 +1,46 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: svtplay-dl
 email: j@i19.se
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >- # this means to ignore newlines until "baseurl:"
+  Small command-line program to download videos from various sites.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://svtplay-dl.se" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: j0hanandersson
 github_username:  spaam
-encoding: utf-8
-# Build settings
-markdown: kramdown
-gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - download
-  - README.md
-  - LICENSE
+google_analytics: UA-67802142-1
 
-permalink:  /:title/
-paginate: 5
-paginate_path: "/page:num/"
-future: true
+# Build settings
+# Below remote theme is usable, but for this site it's included in source instead.
+# remote_theme: granbom/jekyll-theme-bootstrap4-navbar-cdn
+
+permalink: /:title/
+navbar: light # other option dark
+navbar-bg: light # other option dark
+navbar-fixed-top: false  # if true, also add _sass/bootstrap4-cdn.scss padding top
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 defaults:
   -
     scope:
       path: ""
+      type: "posts"
     values:
-      lang: en
-      layout: post
-      type: posts
+      author: "spaam"
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      author: "spaam"
+      layout: "page"
+
+# Exclude from processing.
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - README.md
+   - LICENSE
