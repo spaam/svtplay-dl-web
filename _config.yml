@@ -44,3 +44,5 @@ exclude:
    - Gemfile.lock
    - README.md
    - LICENSE
+   - deploy_rsa.enc
+   - vendor
