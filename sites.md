@@ -21,8 +21,8 @@ permalink: /sites/
 <li>filmarkivet.se</li>
 <li>flowonline.tv</li>
 <li>hbo.com</li>
-<li>kanal5play.se</li>
-<li>kanal9play.se</li>
+<li><del>kanal5play.se</del> dplay.se</li>
+<li><del>kanal9play.se</del> dplay.se</li>
 </ul>
 </div>
 <div class="col-md-4">
@@ -44,17 +44,17 @@ permalink: /sites/
 <div class="col-md-4">
 <h3>T-Z</h3>
 <ul>
-<li>tv10play.se</li>
-<li>tv3play.dk</li>
+<li><del>tv10play.se</del> viafree.se</li>
+<li><del>tv3play.dk</del> viafree.dk</li>
 <li>tv3play.ee</li>
 <li>tv3play.lt</li>
 <li>tv3play.lv</li>
-<li>tv3play.no</li>
-<li>tv3play.se</li>
+<li><del>tv3play.no</del> viafree.no</li>
+<li><del>tv3play.se</del> viafree.se</li>
 <li>tv4.se</li>
 <li>tv4play.se</li>
-<li>tv6play.se</li>
-<li>tv8play.se</li>
+<li><del>tv6play.se</del> viafree.se</li>
+<li><del>tv8play.se</del> viafree.se</li>
 <li>twitch.tv</li>
 <li>ur.se</li>
 <li>urplay.se</li>
