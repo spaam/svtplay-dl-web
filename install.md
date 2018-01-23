@@ -86,16 +86,16 @@ To install svtplay-dl, navigate to the directory where you cloned the source and
 make
 sudo make install
 
-# to test the installation run
+# to test the installation
 svtplay-dl --version
 ```
 
-### Install ffmpeg from source <i class="fab fa-github"></i>
+### Install FFmpeg from source <i class="fab fa-github"></i>
 
 If you are using Ubuntu you can install ffmpeg's prerequisites like this:
 
 ```bash
-sudo apt-get install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libssl-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev mercurial pkg-config texinfo wget zlib1g-dev
+sudo apt-get install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libssl-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo wget zlib1g-dev
 sudo apt-get install yasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev librtmp-dev libxvidcore-dev ocl-icd-opencl-dev
 ```
 
