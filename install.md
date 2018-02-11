@@ -66,6 +66,16 @@ ln -s /mnt/c/Users/your-windows-username/Videos ~/videos
 pip install svtplay-dl
 ```
 
+## Any UNIX (Linux, BSD, macOS, etc.) <i class="fab fa-linux"></i> <i class="fab fa-freebsd"></i> <i class="fab fa-apple"></i>
+
+```bash
+# download with curl
+sudo curl -L https://svtplay-dl.se/download/latest/svtplay-dl -o /usr/local/bin/svtplay-dl
+
+# make it executable
+sudo chmod a+rx /usr/local/bin/svtplay-dl
+```
+
 ## From source <i class="fab fa-github"></i>
 
 Installing from source is fairly straight forward.
