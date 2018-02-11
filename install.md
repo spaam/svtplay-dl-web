@@ -78,7 +78,7 @@ sudo chmod a+rx /usr/local/bin/svtplay-dl
 
 ## From source <i class="fab fa-github"></i>
 
-Installing from source is fairly straight forward.
+Installing from [source](https://github.com/spaam/svtplay-dl) is fairly straight forward.
 First clone the repository:
 
 ```bash
@@ -114,7 +114,7 @@ Then clone from either GitHub's mirror or FFmpeg's official repository.
 Compiling time depends on your computer, but around 10 minutes is normal.
 
 <div class="alert alert-primary" role="alert">
-To speed up the compilation do <code>export MAKEFLAGS="-j4"</code> before you start.
+To speed up the compilation do <code>export MAKEFLAGS="-j4"</code> before you start. Number 4 in this case is the number of logical processors you would like to use for compilation. Hence if you have a dual quad core processor you could use <code>"-j8"</code> if you like.
 </div>
 
 ```bash
