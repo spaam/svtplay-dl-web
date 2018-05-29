@@ -48,6 +48,14 @@ For postprocessing of video files, also install ffmpeg:
 sudo apt-get install ffmpeg
 ```
 
+## Solus <i class="fab fa-linux"></i>
+
+svtplay-dl is avaliable in the stable repository of [Solus](https://solus-project.com/) and can be installed by running:
+
+```
+sudo eopkg it svtplay-dl
+```
+
 ## Windows <i class="fab fa-windows"></i>
 
 
