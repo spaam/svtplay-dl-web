@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+openssl aes-256-cbc -K $encrypted_c1c2fe5b6fae_key -iv $encrypted_c1c2fe5b6fae_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+chmod 600 /tmp/deploy_rsa
+rsync -r -e 'ssh -i /tmp/deploy_rsa' --quiet $TRAVIS_BUILD_DIR/_site/ web@srv.svtplay-dl.se:/var/www/
