@@ -32,7 +32,7 @@ curl -s https://svtplay-dl.se/release-key.txt | sudo apt-key add -
 Add the release channel to your APT sources:
 
 ```bash
-echo "deb http://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
+echo "deb https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
 ```
 
 Update and install svtplay-dl:
