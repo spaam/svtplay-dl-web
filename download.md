@@ -10,8 +10,8 @@ permalink: /archive/
 
 There might be a better solution for you, than downloading a file from here.
 
-* [Latest (currently 1.9.11)](https://svtplay-dl.se/download/latest/svtplay-dl)
-* [Latest windows .exe (currently 1.9.11)](https://svtplay-dl.se/download/latest/svtplay-dl.exe)
+* [Latest (currently 2.0)](https://svtplay-dl.se/download/latest/svtplay-dl)
+* [Latest windows .exe (currently 2.0)](https://svtplay-dl.se/download/latest/svtplay-dl.zip)
 
 <div class="list-group">
 {% for post in site.posts %}
