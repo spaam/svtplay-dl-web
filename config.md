@@ -2,7 +2,7 @@
 layout: page
 title: Config
 description: How to use configfile in svtplay-dl
-fa-icon: fas fa-graduation-cap
+icon: fas fa-check-square
 ---
 
 <p class="lead">How to use configfile in svtplay-dl</p>

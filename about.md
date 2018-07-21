@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: Small command-line program written in python to download videos from various sites
-fa-icon: fas fa-info-circle
+icon: fas fa-info-circle
 ---
 [![PyPI](https://img.shields.io/pypi/status/svtplay-dl.svg)]()
 [![PyPI](https://img.shields.io/pypi/pyversions/svtplay-dl.svg)]()

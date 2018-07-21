@@ -38,7 +38,7 @@
     </li>
     {% else %}
     <li class="nav-item{{ current }}">
-        <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+        <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
     </li>
     {% endif %}
 {% endfor %}                

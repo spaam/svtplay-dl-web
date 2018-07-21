@@ -2,7 +2,7 @@
 layout: page
 title: Supported Sites
 description: Current supported sites for svtplay-dl
-fa-icon: fas fa-globe
+icon: fas fa-globe
 permalink: /sites/
 ---
 <div class="row">

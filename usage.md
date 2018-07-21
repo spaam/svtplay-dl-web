@@ -2,7 +2,7 @@
 layout: page
 title: Usage
 description: How to use svtplay-dl
-fa-icon: fas fa-graduation-cap
+icon: fas fa-graduation-cap
 ---
 
 <p class="lead">After you successfully <a href="/install/">installed svtplay-dl</a> on your computer. You can dig into how to use it below.</p>

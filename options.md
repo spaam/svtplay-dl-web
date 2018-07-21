@@ -2,7 +2,7 @@
 layout: page
 title: Options
 description: All available options for svtplay-dl
-fa-icon: fas fa-cog
+icon: fas fa-cog
 ---
 
 <p class="lead">An overview of all the options svtplay-dl has to offer.</p>

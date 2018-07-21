@@ -2,7 +2,7 @@
 layout: page
 title: Download
 description: Download page for svtplay-dl
-fa-icon: fas fa-download
+icon: fas fa-download
 permalink: /archive/
 ---
 

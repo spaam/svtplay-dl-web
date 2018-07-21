@@ -1,26 +1,35 @@
 - title: Home
   url: /
+  icon: fas fa-home
 
 - title: Install
   url: /install/
+  icon: fas fa-folder-open
 
 - title: Download
   url: /archive/
+  icon: fas fa-download
 
 - title: Usage
   url: /usage/
+  icon: fas fa-graduation-cap
 
 - title: Options
   url: /options/
+  icon: fas fa-cog
 
 - title: Config
   url: /config/
+  icon: fas fa-check-square
 
 - title: Sites
   url: /sites/
+  icon: fas fa-globe
 
 - title: Donate
-  url: /donate/  
-
+  url: /donate/
+  icon: fas fa-dollar-sign 
+  
 - title: About
   url: /about/
+  icon: fas fa-info-circle
