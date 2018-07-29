@@ -49,7 +49,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * http_headers: A header to add to each HTTP request (header1=value;header2=value2)
 * exclude: exclude videos with the WORD(s) in the filename. comma separated (eg kalle,anka)
 * proxy: Use the specified HTTP/HTTPS/SOCKS proxy.
-* filename: {title}.s{season}e{episode}.{episodename}-{id}-{service}.{ext}
+* filename: "{title}.s{season}e{episode}.{episodename}-{id}-{service}.{ext}" # you need `"` before and after the text string
 
 #### filename
 * {title}: the title of the show
@@ -91,6 +91,6 @@ service:
     exclude: a,b,c
     quality: 1337
     flexibleq: 500
-    filename: {title}.s{season}e{episode}.{episodename}-{service}.{ext}
+    filename: "{title}.s{season}e{episode}.{episodename}-{service}.{ext}"
 ```
 
