@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
-# gem "jekyll", "~> 3.7.0"
+gem "jekyll"
 
-gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-sitemap'
 gem 'jekyll-feed'
 gem 'jekyll-paginate'
