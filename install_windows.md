@@ -13,7 +13,7 @@ Unzip and run svtplay-dl.exe from a command prompt.
 
 ## Scoop
 
-If you have [Scoop](https://github.com/lukesampson/scoop) installed you can install with:
+If you have [Scoop](https://scoop.sh/) installed you can install with:
 
 ```
 scoop install svtplay-dl

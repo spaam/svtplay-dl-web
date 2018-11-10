@@ -14,3 +14,7 @@ sudo curl -L https://svtplay-dl.se/download/latest/svtplay-dl -o /usr/local/bin/
 # make it executable
 sudo chmod a+rx /usr/local/bin/svtplay-dl
 ```
+
+## From source
+
+See the [Install from source](/install/source/) page.

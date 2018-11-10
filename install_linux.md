@@ -46,3 +46,7 @@ svtplay-dl is avaliable in the stable repository of [Solus](https://getsol.us/) 
 ```bash
 sudo eopkg it svtplay-dl
 ```
+
+## From source
+
+See the [Install from source](/install/source/) page.
