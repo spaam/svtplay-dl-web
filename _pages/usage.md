@@ -88,7 +88,7 @@ The `-Q` flag is how much `-q` can differ. The above example would look for HLS 
 
 ##### See all options
 
-On the [options]({{ site.baseurl }}{% link options.md %}) page you can view all options available in svtplay-dl
+On the [options]({{ site.baseurl }}{% link _pages/options.md %}) page you can view all options available in svtplay-dl
 
 ## Post processing
 

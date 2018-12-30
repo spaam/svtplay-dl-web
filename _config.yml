@@ -22,6 +22,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+include: ["_pages"]
+
 defaults:
   -
     scope:

@@ -17,6 +17,6 @@ description: Small command-line program written in python to download videos fro
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/spaam/svtplay-dl.svg)]()
 
 
-Small command-line program written in [python](https://www.python.org/) to download videos from various [sites]({{ site.baseurl }}{% link sites.md %}).
+Small command-line program written in [python](https://www.python.org/) to download videos from various [sites]({{ site.baseurl }}{% link _pages/sites.md %}).
 
 Source code available in [GitHub](https://github.com/spaam/svtplay-dl)
