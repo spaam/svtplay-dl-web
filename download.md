@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Download
-description: Download page for svtplay-dl
-icon: fas fa-download
 permalink: /archive/
+icon: fas fa-download
+description: Download page for svtplay-dl
 ---
 
 <p class="lead">Before you download anything here, have a look at the <a href="/install/">install page</a> first.</p>

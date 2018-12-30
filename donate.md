@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Donate
-description: If you like this project, please donate!
+permalink: /donate/
 icon: fas fa-dollar-sign
+description: If you like this project, please donate!
 ---
 
 You can donate via paypal <i class="fab fa-paypal"></i>, bitcoin <i class="fab fa-bitcoin"></i> or ethereum <i class="fab fa-ethereum"></i>.

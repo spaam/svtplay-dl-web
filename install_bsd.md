@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Install on BSD
-description: Installation instructions for svtplay-dl on BSD
-icon: fab fa-freebsd
 permalink: /install/bsd/
+icon: fab fa-freebsd
+description: Installation instructions for svtplay-dl on BSD
 ---
 
 ## Download with curl

@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Install on Linux
-description: Installation instructions for svtplay-dl on Linux
-icon: fab fa-linux
 permalink: /install/linux/
+icon: fab fa-linux
+description: Installation instructions for svtplay-dl on Linux
 ---
 
 ## For any Linux

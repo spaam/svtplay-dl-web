@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Install on macOS
-description: Installation instructions for svtplay-dl on macOS
-icon: fab fa-apple
 permalink: /install/macos/
+icon: fab fa-apple
+description: Installation instructions for svtplay-dl on macOS
 ---
 
 ## With Homebrew

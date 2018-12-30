@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Install on Windows
-description: Installation instructions for svtplay-dl on Windows
-icon: fab fa-windows
 permalink: /install/windows/
+icon: fab fa-windows
+description: Installation instructions for svtplay-dl on Windows
 ---
 
 ## Download

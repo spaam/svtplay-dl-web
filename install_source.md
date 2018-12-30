@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Install from source
-description: Installation instructions for svtplay-dl from source
-icon: fab fa-github
 permalink: /install/source/
+icon: fab fa-github
+description: Installation instructions for svtplay-dl from source
 ---
 
 <p class="lead">Installing svtplay-dl from source is pretty simple. Follow the instuctions for your OS.</p>

@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Config
-description: How to use configfile in svtplay-dl
+permalink: /config/
 icon: fas fa-check-square
+description: How to use configfile in svtplay-dl
 ---
 
 <p class="lead">How to use configfile in svtplay-dl</p>

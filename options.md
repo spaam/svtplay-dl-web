@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Options
-description: All available options for svtplay-dl
+permalink: /options/
 icon: fas fa-cog
+description: All available options for svtplay-dl
 ---
 
 <p class="lead">An overview of all the options svtplay-dl has to offer.</p>
