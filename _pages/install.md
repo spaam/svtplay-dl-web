@@ -29,6 +29,11 @@ description: Installation instructions for svtplay-dl
       <h2 class="mb-1">BSD <i class="fab fa-freebsd"></i></h2>
     </div>
 </a>
+<a href="/install/docker/" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex justify-content-between">
+      <h2 class="mb-1">Docker <i class="fab fa-docker"></i></h2>
+    </div>
+</a>
 <a href="/install/source" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex justify-content-between">
       <h2 class="mb-1">From Source <i class="fab fa-github"></i></h2>
