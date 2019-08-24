@@ -10,8 +10,10 @@ description: Download page for svtplay-dl
 
 There might be a better solution for you, than downloading a file from here.
 
-* [Latest (currently 2.1)](https://svtplay-dl.se/download/latest/svtplay-dl)
-* [Latest windows .exe (currently 2.1)](https://svtplay-dl.se/download/latest/svtplay-dl.zip)
+* [Latest (currently 2.2)](https://svtplay-dl.se/download/latest/svtplay-dl)
+* [Latest windows .exe (currently 2.2)](https://svtplay-dl.se/download/latest/svtplay-dl.zip)
+
+* [Snapshots](/download/snapshots/) created from each push. it might be broken. use at your own risk.
 
 <div class="list-group">
 {% for post in site.posts %}
