@@ -12,7 +12,7 @@ You can download the latest release [here](https://svtplay-dl.se/download/latest
 
 _If you'd like the latest bleeding edge build from the current [master](https://github.com/spaam/svtplay-dl), you'll find it here:_
 
-[https://ci.appveyor.com/project/spaam/svtplay-dl/build/artifacts](https://ci.appveyor.com/project/spaam/svtplay-dl/build/artifacts).
+[https://svtplay-dl.se/download/snapshots/](https://svtplay-dl.se/download/snapshots/).
 
 <div class="alert alert-primary" role="alert">
   Builds from master could often help solve recent issues.
