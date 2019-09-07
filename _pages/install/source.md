@@ -31,12 +31,12 @@ svtplay-dl --version
 
 svtplay-dl requires the following additional tools and libraries. They are usually available from your distribution’s package repositories. If you don’t have them, some features will not be working.
 
-* [Python](https://www.python.org/) 3.4 or higher
+* [Python](https://www.python.org/) 3.5 or higher
 * [Requests](http://www.python-requests.org/) ```pip3 install requests```
-* [RTMPDump 2.4](https://rtmpdump.mplayerhq.hu/) or higher to download RTMP streams. 
 * [cryptography](https://cryptography.io/en/latest/) to download encrypted HLS streams. ```pip3 install cryptography```
 * [PyYaml](https://github.com/yaml/pyyaml) for configure file. ```pip3 install pyyaml```
 * [PySocks](https://github.com/Anorov/PySocks) to enable proxy support. ```pip3 install pysocks```
+* [python-dateutil][https://github.com/dateutil/dateutil] ```pip3 install python-dateutil```
 * [ffmpeg](https://ffmpeg.org/) or [avconv](https://libav.org/) for postprocessing and/or for DASH streams
 
 ## For Windows <i class="fab fa-windows"></i>
