@@ -44,6 +44,7 @@ svtplay-dl requires the following additional tools and libraries. They are usual
 * Install [cx_freeze](https://anthony-tuininga.github.io/cx_Freeze/)
 * Clone the repository https://github.com/spaam/svtplay-dl.git
 * cd path\to\svtplay-dl && mkdir build
+* `pip install -e .`
 * python3 setversion.py # this will change the version string to a more useful one
 * python3 %PYTHON%\\Scripts\\cxfreeze --include-modules=queue,idna.idnadata --target-dir=build bin/svtplay-dl
 * Find binary in build folder. you need svtplay-dl.exe and pythonXX.dll from that folder to run svtplay-dl.exe
