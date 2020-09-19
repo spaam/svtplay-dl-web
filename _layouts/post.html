@@ -1,6 +1,24 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }} <small class="text-muted">{{ page.date | date: '%B %d, %Y' }}</small></h1>
+<h1>{{ page.title }} <small class="text-muted">{{ page.date | date: '%Y-%m-%d' }}</small></h1>
 <hr>
 {{ content }}
+
+{% if page.categories contains "releases" %}
+    {% if page.binary %}
+        <a href="/download/{{ page.title }}/svtplay-dl">download</a><br />
+    {% endif %}
+    {% if page.windows-old-exe %}
+        <a href="/download/{{ page.title }}/svtplay-dl.exe">download windows .exe</a><br />
+    {% endif %}
+    {% if page.windows-old-zip %}
+        <a href="/download/{{ page.title }}/svtplay-dl.zip">download windows .exe</a><br />
+    {% endif %}
+    {% if page.windows-amd64 %}
+        <a href="/download/{{ page.title }}/svtplay-dl-amd64.zip">download windows 64bit .exe</a><br />
+    {% endif %}
+    {% if page.windows-win32 %}
+        <a href="/download/{{ page.title }}/svtplay-dl-win32.zip">download windows 32bit .exe</a><br />
+    {% endif %}
+{% endif %}
