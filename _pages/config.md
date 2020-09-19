@@ -39,6 +39,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * password: what password to use
 * path: output directory (ex /path/to/directory)
 * preferred: preferred download method (dash, hls, hds, http or rtmp)
+* format_preferred: choose the format you prefer (h264, h265, h264-51). --list-quality will show which format is available 
 * proxy: Use the specified HTTP/HTTPS/SOCKS proxy.
 * quality: what quality it should download.
 * remux: set to true to enable
