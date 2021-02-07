@@ -15,15 +15,13 @@ description: Current supported sites for svtplay-dl
 <li>dbtv.no</li>
 <li>di.se</li>
 <li>dn.se</li>
-<li>dplay.se</li>
+<li>discoveryplus.se/no/dk</li>
 <li>dr.dk</li>
 <li>efn.se</li>
 <li>expressen.se</li>
 <li>filmarkivet.se</li>
 <li>flowonline.tv</li>
 <li>hbo.com</li>
-<li><del>kanal5play.se</del> dplay.se</li>
-<li><del>kanal9play.se</del> dplay.se</li>
 </ul>
 </div>
 <div class="col-md-4">
