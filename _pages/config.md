@@ -27,6 +27,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * all_episodes: try to download all episodes. set to true to enable
 * all_last: get last NN episodes instead of all episodes: set to a number
 * convert_subtitle_colors: converts the color information in subtitles, to tags . set to true to enable
+* cookies: A cookies to add to each HTTP request. (cookie1=value;cookie2=value2)
 * exclude: exclude videos with the WORD(s) in the filename. comma separated (eg kalle,anka)
 * filename: "{title}.s{season}e{episode}.{episodename}-{id}-{service}.{ext}" # you need " before and after the text string
 * flexibleq: allow given quality (as above) to differ by an amount
