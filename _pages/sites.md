@@ -43,17 +43,12 @@ description: Current supported sites for svtplay-dl
 <div class="col-md-4">
 <h3>T-Z</h3>
 <ul>
-<li><del>tv10play.se</del> viafree.se</li>
-<li><del>tv3play.dk</del> viafree.dk</li>
+<li>viafree.se/no/dk</li>
 <li>tv3play.ee</li>
 <li>tv3play.lt</li>
 <li>tv3play.lv</li>
-<li><del>tv3play.no</del> viafree.no</li>
-<li><del>tv3play.se</del> viafree.se</li>
 <li>tv4.se</li>
 <li>tv4play.se</li>
-<li><del>tv6play.se</del> viafree.se</li>
-<li><del>tv8play.se</del> viafree.se</li>
 <li>twitch.tv</li>
 <li>ur.se</li>
 <li>urplay.se</li>
