@@ -36,7 +36,6 @@ svtplay-dl requires the following additional tools and libraries. They are usual
 * [cryptography](https://cryptography.io/en/latest/) to download encrypted HLS streams. ```pip3 install cryptography```
 * [PyYaml](https://github.com/yaml/pyyaml) for configure file. ```pip3 install pyyaml```
 * [PySocks](https://github.com/Anorov/PySocks) to enable proxy support. ```pip3 install pysocks```
-* [python-dateutil][https://github.com/dateutil/dateutil] ```pip3 install python-dateutil```
 * [ffmpeg](https://ffmpeg.org/) or [avconv](https://libav.org/) for postprocessing and/or for DASH streams
 
 ## For Windows <i class="fab fa-windows"></i>
