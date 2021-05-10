@@ -11,7 +11,6 @@ description: Current supported sites for svtplay-dl
 <h3>A-L</h3>
 <ul>
 <li>aftonbladet.se</li>
-<li>bambuser.com</li>
 <li>dbtv.no</li>
 <li>di.se</li>
 <li>dn.se</li>
@@ -21,7 +20,6 @@ description: Current supported sites for svtplay-dl
 <li>expressen.se</li>
 <li>filmarkivet.se</li>
 <li>flowonline.tv</li>
-<li>hbo.com</li>
 </ul>
 </div>
 <div class="col-md-4">
