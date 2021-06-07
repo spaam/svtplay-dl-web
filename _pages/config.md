@@ -54,6 +54,11 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * thumbnail: download thumbnail from the site if available. set to true to enable
 * username: what username it should use
 * verbose: set to true to enable
+* only_audio: set to true to enable
+* only_video: set to true to enable
+* audio_language: Choose the language of the audio (it can override the default one), --list-quality to show which one to choose from
+* audio_role: Choose the role of the audio (it can override the default one), --list-quality to show which one to choose from
+
 
 #### filename
 * {title}: the title of the show
