@@ -101,5 +101,7 @@ Post-processing:
   --no-merge            Do not automatically merge video, audio and possibly also subtitle(s) together
   --no-postprocess      Do not postprocess anything
   --keep-original       Do postprocessing while also keeping original files
+  --output-format {mp4,mkv}
+                      format you want resulting file in (mkv or mp4), mp4 is default
 
 ```
