@@ -14,7 +14,6 @@ description: Current supported sites for svtplay-dl
 <li>dbtv.no</li>
 <li>di.se</li>
 <li>dn.se</li>
-<li>discoveryplus.se/no/dk</li>
 <li>dr.dk</li>
 <li>efn.se</li>
 <li>expressen.se</li>
