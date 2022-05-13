@@ -43,6 +43,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * format_preferred: choose the format you prefer (h264, h265, h264-51). --list-quality will show which format is available 
 * proxy: Use the specified HTTP/HTTPS/SOCKS proxy.
 * quality: what quality it should download.
+* resolution: choose what video resolution to download e.g. 480,720,1080.
 * remux: set to true to enable
 * require_subtitle: download only if a subtitle is available. set to true to enable
 * silent: be less verbose. set to true to enable
