@@ -23,20 +23,20 @@ The recommended way is to use our own [repo](https://apt.svtplay-dl.se/).
 
 ```bash
 # Add the PGP release keys:
-curl -s https://svtplay-dl.se/release-key.txt | sudo apt-key add -
+sudo curl -s https://svtplay-dl.se/release-key.txt --output /usr/share/keyrings/svtplay-dl.txt
 
 # Add the release channel to your APT sources:
 
-echo "deb https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
+echo "deb [signed-by=/usr/share/keyrings/svtplay-dl.txt] https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
 
 # Update and install svtplay-dl:
 
-sudo apt-get update
-sudo apt-get install svtplay-dl
+sudo apt update
+sudo apt install svtplay-dl
 
 # For postprocessing of video files, also install ffmpeg:
 
-sudo apt-get install ffmpeg
+sudo apt install ffmpeg
 ```
 
 ## Solus
