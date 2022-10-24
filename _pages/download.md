@@ -10,9 +10,9 @@ description: Download page for svtplay-dl
 
 There might be a better solution for you, than downloading a file from here.
 
-* [Latest (currently 4.13)](https://svtplay-dl.se/download/4.13/svtplay-dl)
-* [Latest windows 64bit .exe (currently 4.13)](https://svtplay-dl.se/download/4.13/svtplay-dl-amd64.zip)
-* [Latest windows 32bit .exe (currently 4.13)](https://svtplay-dl.se/download/4.13/svtplay-dl-win32.zip)
+* [Latest (currently 4.14)](https://svtplay-dl.se/download/4.14/svtplay-dl)
+* [Latest windows 64bit .exe (currently 4.14)](https://svtplay-dl.se/download/4.14/svtplay-dl-amd64.zip)
+* [Latest windows 32bit .exe (currently 4.14)](https://svtplay-dl.se/download/4.14/svtplay-dl-win32.zip)
 
 * [Snapshots](/download/snapshots/) created from each push. it might be broken. use at your own risk.
 
