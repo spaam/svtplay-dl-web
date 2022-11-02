@@ -50,7 +50,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * silent_semi: only show a message when the file is downloaded. set to true to enable
 * ssl_verify: set to false if you dont want to verify the certificate
 * stream_prio: If two streams have the same quality, choose the one you prefer (dash,hls,hds,http,rtmp)
-* subfolder: sort downloaded files in subfodlers. set to true to enable
+* subfolder: sort downloaded files in subfolders. set to true to enable
 * subtitle: set to true to enable
 * thumbnail: download thumbnail from the site if available. set to true to enable
 * username: what username it should use
