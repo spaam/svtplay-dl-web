@@ -27,7 +27,7 @@ jobs:
     - uses:  lemonarc/jekyll-action@1.0.0
 
     - name: check
-      run: ls /github/workspace/_site/
-      
+      run: ls ./_site/
+
     - name: test
       run: rsync --version
