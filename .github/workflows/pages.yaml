@@ -18,16 +18,19 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
 
-    - name: Install SSH Key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.SSH_PRIVATE_KEY }} 
-        known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }} 
     # Standard usage
     - uses:  lemonarc/jekyll-action@1.0.0
 
     - name: check
       run: ls ./_site/
 
-    - name: test
-      run: rsync --version
+    - name: Install SSH Key
+      if: ${{ github.ref == 'refs/heads/master' }}
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }} 
+
+    - name: deploy
+      if: ${{ github.ref == 'refs/heads/master' }}
+      run: rsync -avz --quiet ./_site/ web@${{ secrets.SSH_HOST }} :/var/www/
