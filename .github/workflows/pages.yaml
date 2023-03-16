@@ -1,0 +1,36 @@
+name: Build and deploy Jekyl
+
+on:
+  push:
+
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - uses: actions/cache@v3
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    # Standard usage
+    - uses:  lemonarc/jekyll-action@1.0.0
+
+    - name: check
+      run: ls ./_site/
+
+    - name: Install SSH Key
+      if: ${{ github.ref == 'refs/heads/master' }}
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }} 
+
+    - name: deploy
+      if: ${{ github.ref == 'refs/heads/master' }}
+      run: rsync -avz --quiet ./_site/ web@${{ secrets.SSH_HOST }}:/var/www/
