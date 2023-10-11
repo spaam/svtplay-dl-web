@@ -19,8 +19,14 @@ jobs:
           ${{ runner.os }}-gems-
 
     # Standard usage
-    - uses:  lemonarc/jekyll-action@1.0.0
-
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+    - name: Build with Jekyll
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
     - name: check
       run: ls ./_site/
 
