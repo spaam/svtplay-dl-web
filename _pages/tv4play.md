@@ -8,11 +8,11 @@ description: tv4play workarounud
 
 
 
-Login to tv4play.se,  then press `ctrl + shift + i` or `F12` , then press `console` tab.
+Login to tv4play.se, then press `ctrl + shift + i` or `F12`, then press `console` tab.
 <br />
 ![console](/assets/console.png) <br />
 
-type in code and copy the text:
+copy the code below and paste it in the text area next to the `>` sign then press enter.
 
 ```bash
 document.cookie
@@ -24,7 +24,7 @@ document.cookie
 Copy that text that starts with `ey..`<br />
 then you can use it like this: `svtplay-dl --token "ey.." https://tv4play.se/..`
 
-or use put it in the [config](/config) like this for example
+or use put it in the [config](/config/) like this for example
 
 ```yaml
 service:
