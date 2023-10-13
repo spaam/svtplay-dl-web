@@ -27,3 +27,7 @@ alias svtplay-dl='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd):/data" spa
 ```sh
 alias svtplay-dl='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd):/data" spaam/svtplay-dl'
 ```
+##### fish (~/.config/fish/config.fish)
+```
+alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):/data spaam/svtplay-dl'
+```
