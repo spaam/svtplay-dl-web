@@ -31,7 +31,7 @@ svtplay-dl --version
 
 svtplay-dl requires the following additional tools and libraries. They are usually available from your distribution’s package repositories. If you don’t have them, some features will not be working.
 
-* [Python](https://www.python.org/) 3.6 or higher
+* [Python](https://www.python.org/) 3.8 or higher
 * [Requests](http://www.python-requests.org/) ```pip3 install requests```
 * [cryptography](https://cryptography.io/en/latest/) to download encrypted HLS streams. ```pip3 install cryptography```
 * [PyYaml](https://github.com/yaml/pyyaml) for configure file. ```pip3 install pyyaml```
