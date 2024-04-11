@@ -30,6 +30,7 @@ description: Current supported sites for svtplay-dl
 <li>nrk.no</li>
 <li>oppetarkiv.se</li>
 <li>pokemon.com</li>
+<li>regeringen.se</li>
 <li>ruv.is</li>
 <li>riksdagen.se</li>
 <li>svd.se</li>
@@ -40,7 +41,6 @@ description: Current supported sites for svtplay-dl
 <div class="col-md-4">
 <h3>T-Z</h3>
 <ul>
-<li>viafree.se/no/dk</li>
 <li>tv3play.ee</li>
 <li>tv3play.lt</li>
 <li>tv3play.lv</li>
@@ -49,6 +49,7 @@ description: Current supported sites for svtplay-dl
 <li>twitch.tv</li>
 <li>ur.se</li>
 <li>urplay.se</li>
+<li>vasaloppet.se</li>
 <li>vg.no</li>
 <li>viagame.com</li>
 <li>viafree.se/.dk/.no</li>
