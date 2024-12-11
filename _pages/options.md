@@ -9,27 +9,27 @@ description: All available options for svtplay-dl
 <p class="lead">An overview of all the options svtplay-dl has to offer.</p>
 
 ```plaintext
-usage: svtplay-dl [-h] [--version] [-o output] [--subfolder] [--config configfile] [-f] [-r] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD] [-t] [-g]
-                  [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2]
-                  [--exclude WORD1,WORD2,...] [--after-date yyyy-MM-dd] [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [-q quality] [-Q amount]
-                  [-P preferred] [--list-quality] [--stream-priority dash,hls,http] [--format-preferred h264,h264-51] [--audio-language AUDIO_LANGUAGE]
-                  [--audio-role AUDIO_ROLE] [-S] [-M] [--force-subtitle] [--require-subtitle] [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors] [-A]
-                  [--all-last NN] [--include-clips] [--cmore-operatorlist] [--cmore-operator operator] [--no-remux] [--no-merge] [--no-postprocess] [--keep-original]
-                  [urls [urls ...]]
+usage: svtplay-dl [-h] [--version] [-o output] [--filename filename] [--subfolder] [--config configfile] [-f] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD] [--token TOKEN] [-t]
+                  [-g] [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2] [--exclude WORD1,WORD2,...]
+                  [--after-date yyyy-MM-dd] [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [-q quality] [-Q amount] [-P preferred] [--list-quality]
+                  [--stream-priority dash,hls,http] [--format-preferred h264,h264-51] [--audio-language AUDIO_LANGUAGE] [--video-role VIDEO_ROLE] [--resolution RESOLUTION] [-S] [-M] [--force-subtitle]
+                  [--require-subtitle] [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors] [-A] [--all-last NN] [--include-clips] [-R] [--cmore-operatorlist] [--cmore-operator operator]
+                  [--no-remux] [--no-merge] [--no-postprocess] [--keep-original] [--output-format {mp4,mkv}]
+                  [urls ...]
 
 positional arguments:
   urls
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
 
   --version             show program's version number and exit
   -o output, --output output
                         outputs to the given filename or folder
+  --filename filename   filename format {title}.s{season}e{episode}.{episodename}-{id}-{service}.{ext}
   --subfolder           Create a subfolder titled as the show, non-series gets in folder movies
   --config configfile   Specify configuration file
   -f, --force           overwrite if file exists already
-  -r, --resume          resume a download (RTMP obsolete)
   -l, --live            enable for live streams (RTMP based ones)
   -c capture_time, --capture_time capture_time
                         define capture time in minutes of a live stream
@@ -39,6 +39,7 @@ optional arguments:
                         username
   -p PASSWORD, --password PASSWORD
                         password
+  --token TOKEN         token
   -t, --thumbnail       download thumbnail from the site if available
   -g, --get-url         do not download any video, but instead print the URL.
   --get-only-episode-url
@@ -74,12 +75,14 @@ Quality:
                         Choose the format you prefer, --list-quality to show which one to choose from
   --audio-language AUDIO_LANGUAGE
                         Choose the language of the audio (it can override the default one), --list-quality to show which one to choose from
-  --audio-role AUDIO_ROLE
-                        Choose the role of the audio (it can override the default one), --list-quality to show which one to choose from
+  --video-role VIDEO_ROLE
+                        Choose the role of the video (it can override the default one), --list-quality to show which one to choose from
+  --resolution RESOLUTION
+                        Choose what video resolution to download e.g. 480,720,1080. comma seperated
 
 Subtitle:
-  -S, --subtitle        download subtitle from the site if available
-  -M, --merge-subtitle  merge subtitle with video/audio file with corresponding ISO639-3 language code.this invokes --remux automatically.
+  -S, --subtitle        download subtitle from the site if available. both merged and separately stored if used with -M
+  -M, --merge-subtitle  merge subtitle with video/audio file with corresponding ISO639-3 language code. also saved separately if used with -S
   --force-subtitle      download only subtitle if its used with -S
   --require-subtitle    download only if a subtitle is available
   --all-subtitles       Download all available subtitles for the video
@@ -91,6 +94,7 @@ All:
   -A, --all-episodes    try to download all episodes
   --all-last NN         get last NN episodes instead of all episodes
   --include-clips       include clips from websites when using -A
+  -R, --reverse         Reverse download order
 
 C More:
   --cmore-operatorlist  show operatorlist for cmore
@@ -102,6 +106,5 @@ Post-processing:
   --no-postprocess      Do not postprocess anything
   --keep-original       Do postprocessing while also keeping original files
   --output-format {mp4,mkv}
-                      format you want resulting file in (mkv or mp4), mp4 is default
-
+                        format you want resulting file in (mkv or mp4), mp4 is default
 ```
