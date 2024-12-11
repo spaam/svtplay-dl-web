@@ -58,8 +58,9 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 * only_audio: set to true to enable
 * only_video: set to true to enable
 * audio_language: Choose the language of the audio (it can override the default one), --list-quality to show which one to choose from
-* audio_role: Choose the role of the audio (it can override the default one), --list-quality to show which one to choose from
 * output_format: format you want resulting file in (mkv or mp4), mp4 is default
+* token: add a value for token
+* reverse_list: set to true for reverse download order
 
 
 #### filename
