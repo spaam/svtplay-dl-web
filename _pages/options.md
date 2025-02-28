@@ -9,12 +9,11 @@ description: All available options for svtplay-dl
 <p class="lead">An overview of all the options svtplay-dl has to offer.</p>
 
 ```plaintext
-usage: svtplay-dl [-h] [--version] [-o output] [--filename filename] [--subfolder] [--config configfile] [-f] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD] [--token TOKEN] [-t]
-                  [-g] [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2] [--exclude WORD1,WORD2,...]
-                  [--after-date yyyy-MM-dd] [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [-q quality] [-Q amount] [-P preferred] [--list-quality]
-                  [--stream-priority dash,hls,http] [--format-preferred h264,h264-51] [--audio-language AUDIO_LANGUAGE] [--video-role VIDEO_ROLE] [--resolution RESOLUTION] [-S] [-M] [--force-subtitle]
-                  [--require-subtitle] [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors] [-A] [--all-last NN] [--include-clips] [-R] [--no-remux] [--no-merge] [--no-postprocess]
-                  [--keep-original] [--output-format {mp4,mkv}]
+usage: svtplay-dl [-h] [--version] [-o output] [--filename filename] [--subfolder] [--config configfile] [-f] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD] [--token TOKEN] [-t] [-g]
+                  [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2] [--exclude WORD1,WORD2,...] [--after-date yyyy-MM-dd]
+                  [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [-q quality] [-Q amount] [-P preferred] [--list-quality] [--stream-priority dash,hls,http] [--format-preferred h264,h264-51]
+                  [--audio-language AUDIO_LANGUAGE] [--video-role VIDEO_ROLE] [--resolution RESOLUTION] [-S] [-M] [--force-subtitle] [--require-subtitle] [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors]
+                  [-A] [--all-last NN] [--include-clips] [-R] [--no-remux] [--no-merge] [--no-postprocess] [--keep-original] [--output-format {mp4,mkv}] [--chapters]
                   [urls ...]
 
 positional arguments:
@@ -103,4 +102,5 @@ Post-processing:
   --keep-original       Do postprocessing while also keeping original files
   --output-format {mp4,mkv}
                         format you want resulting file in (mkv or mp4), mp4 is default
+  --chapters            Get chapters and add it to the file
 ```

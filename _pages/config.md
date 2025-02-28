@@ -26,6 +26,7 @@ ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml
 ### keywords:
 * all_episodes: try to download all episodes. set to true to enable
 * all_last: get last NN episodes instead of all episodes: set to a number
+* chapters: set to true to enable. Get chapters and add it to the file
 * convert_subtitle_colors: converts the color information in subtitles, to tags . set to true to enable
 * cookies: A cookies to add to each HTTP request. (cookie1=value;cookie2=value2)
 * exclude: exclude videos with the WORD(s) in the filename. comma separated (eg kalle,anka)
