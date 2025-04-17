@@ -10,9 +10,17 @@ description: How to use configfile in svtplay-dl
 commandline argument to svtplay-dl will override the values from the config.
 the script use yaml for the config.
 
-### Path to config:
-#### linux  <i class="fab fa-linux"></i> / macOS <i class="fab fa-apple"></i>
+### Path to config ###
+### Current working directory ###
 ```bash
+svtplay-dl.yaml
+```
+### then it will check following ###
+#### linux  <i class="fab fa-linux"></i> / macOS <i class="fab fa-apple"></i>
+it will check for the config in following order:
+```bash
+$XDG_CONFIG_HOME/svtplay-dl/svtplay.yaml
+~/.config/svtplay-dl/svtplay-dl.yaml
 ~/.svtplay-dl.yaml
 ```
 ex /home/johan/.svtplay-dl.yaml
