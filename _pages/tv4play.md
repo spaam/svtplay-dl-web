@@ -1,12 +1,12 @@
 ---
 layout: page
-title: tv4play
+title: TV4 Play
 permalink: /tv4play/
-icon: fas fa-folder-open
+icon: fas fa-circle-play
 description: tv4play workarounud
 ---
 
-
+## How to get a token for TV4 Play
 
 Login to tv4play.se, then press `ctrl + shift + i` or `F12`, then press `console` tab.
 <br />
