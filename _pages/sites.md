@@ -45,7 +45,7 @@ description: Current supported sites for svtplay-dl
 <li>tv3play.lt</li>
 <li>tv3play.lv</li>
 <li>tv4.se</li>
-<li>tv4play.se</li>
+<li><a href="/tv4play">tv4play.se</a></li>
 <li>twitch.tv</li>
 <li>ur.se</li>
 <li>urplay.se</li>
