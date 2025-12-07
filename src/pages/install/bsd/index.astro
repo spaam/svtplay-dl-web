@@ -1,0 +1,46 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFreebsd } from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Install on BSD";
+const description = "Installation instructions for svtplay-dl on BSD";
+const curl = `sudo curl -L https://svtplay-dl.se/download/latest/svtplay-dl -o /usr/local/bin/svtplay-dl
+
+# make it executable
+sudo chmod a+rx /usr/local/bin/svtplay-dl`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faFreebsd} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-3xl">Download with curl</div>
+            <div>
+                You have to deal with dependencies yourself and you need to install
+                <span class="text-pink-500">ffmpeg</span>
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code lang="bash" code={curl} />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">From source</div>
+            <div>
+                See the
+                <a href="/install/source/" class="text-blue-500"> Install from source </a> page
+            </div>
+        </div>
+    </div>
+</Layout>

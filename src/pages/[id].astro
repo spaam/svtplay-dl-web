@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    return posts.map((post) => ({
+        params: { id: post.id },
+        props: { post },
+    }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const description = `${post.id} release`;
+const releases = [];
+if (post.data.categories == "releases") {
+    if (post.data.binary) {
+        releases.push({ url: "/download/" + post.id + "/svtplay-dl", text: "download" });
+    }
+    if (post.data.windows_old_exe) {
+        releases.push({
+            url: "/download/" + post.id + "/svtplay-dl.exe",
+            text: "download windows .exe",
+        });
+    }
+    if (post.data.windows_old_zip) {
+        releases.push({
+            url: "/download/" + post.id + "/svtplay-dl.zip",
+            text: "download windows .exe",
+        });
+    }
+    if (post.data.windows_amd64) {
+        releases.push({
+            url: "/download/" + post.id + "/svtplay-dl-amd64.zip",
+            text: "download windows 64bit .exe",
+        });
+    }
+    if (post.data.windows_win32) {
+        releases.push({
+            url: "/download/" + post.id + "/svtplay-dl-win32.zip",
+            text: "download windows 32bit .exe",
+        });
+    }
+}
+---
+
+<Layout title={post.data.title} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {post.data.title}
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="md-content">
+                <Content />
+            </div>
+            <div>
+                {
+                    releases.map((release) => (
+                        <>
+                            <a href={release.url} class="text-blue-500">
+                                {release.text}
+                            </a>
+                            <br />
+                        </>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</Layout>

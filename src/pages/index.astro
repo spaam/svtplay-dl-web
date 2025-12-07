@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { release_date, release_version } from "../config.js";
+const pageTitle = "Home";
+const description =
+    "svtplay-dl is an open source command-line program written in python for downloading videos from different play services.";
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid mt-4>">
+        <h1 class="text-4xl">Home of svtplay-dl</h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="grid grid-cols-3 grid-rows-1 gap-4">
+        <div class="col-span-2 text-xl">
+            <div>Download videos from your favourite play services.</div>
+            <br />
+            svtplay-dl is an open source command-line program written in python. You can quickly download
+            published videos from various sites to your local computer.
+            <br />
+            <div class="mt-4">
+                <a
+                    href="/install"
+                    class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 border border-gray-300 dark:border-gray-600 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100 px-6 py-3 text-lg">
+                    Get Started
+                </a>
+                <a
+                    href="/archive"
+                    class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 border border-gray-300 dark:border-gray-600 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100 px-6 py-3 text-lg">
+                    Download
+                </a>
+                <p class="mb-0 pt-2">Currently v{release_version} ({release_date})</p>
+            </div>
+        </div>
+        <div class="col-start-3">
+            <img src="/logo.svg" alt="logo" width={265} height={256} />
+        </div>
+    </div>
+</Layout>

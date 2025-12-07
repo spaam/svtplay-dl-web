@@ -1,0 +1,145 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinux,
+    faFreebsd,
+    faApple,
+    faWindows,
+} from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Install on source";
+const description = "Installation instructions for svtplay-dl from source";
+
+const sourcegit = `# First clone the repository:
+git clone https://github.com/spaam/svtplay-dl.git
+
+# To install svtplay-dl, navigate to the directory where you cloned the source and run:
+make
+sudo make install
+
+# to test the installation
+svtplay-dl --version`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faGithub} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-3xl">
+                Installing svtplay-dl from source is pretty simple. Follow the instuctions for your
+                OS.
+            </div>
+            <div>
+                For Linux <FontAwesomeIcon icon={faLinux} />, BSD <FontAwesomeIcon
+                    icon={faFreebsd}
+                />, macOS{" "}
+                <FontAwesomeIcon icon={faApple} />
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={sourcegit}
+                        />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">Prerequisites</div>
+            <div>
+                svtplay-dl requires the following additional tools and libraries. They are usually
+                available from your distribution's package repositories. If you don't have them,
+                some features will not be working.
+            </div>
+            <div class="p-6">
+                <ul class="list-disc">
+                    <li>
+                        <a href="https://www.python.org" class="text-blue-500"> Python </a>
+                        3.9 or higher
+                    </li>
+                    <li>
+                        <a href="http://www.python-requests.org/" class="text-blue-500">
+                            Requests
+                        </a>
+                        <span class="text-pink-500">pip3 install requests</span>
+                    </li>
+                    <li>
+                        <a href="https://cryptography.io/en/latest/" class="text-blue-500">
+                            cryptography
+                        </a>
+                        to download encrypted HLS streams.
+                        <span class="text-pink-500">pip3 install cryptography</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/yaml/pyyaml" class="text-blue-500"> PyYaml </a>
+                        for configure file. <span class="text-pink-500">pip3 install pyyaml</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Anorov/PySocks" class="text-blue-500">
+                            PySocks
+                        </a>
+                        to enable proxy support. <span class="text-pink-500"
+                            >pip3 install pysocks</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://ffmpeg.org/" class="text-blue-500"> ffmpeg </a>
+                        to merge audio and video streams into one file
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">
+                For Windows <FontAwesomeIcon icon={faWindows} />
+            </div>
+            <div class="p-6">
+                <ul class="list-disc">
+                    <li>
+                        Install
+                        <a
+                            href="https://cx-freeze.readthedocs.io/en/stable/index.html"
+                            class="text-blue-500">
+                            cx_freeze
+                        </a>
+                    </li>
+                    <li>
+                        Clone the repository{" "}
+                        <span class="text-pink-500">https://github.com/spaam/svtplay-dl.git</span>
+                    </li>
+                    <li>cd path\to\svtplay-dl && mkdir build</li>
+                    <li>
+                        <span class="text-pink-500">pip install -e .</span>
+                    </li>
+                    <li>
+                        python3 setversion.py # this will change the version string to a more useful
+                        one
+                    </li>
+                    <li>
+                        python3 %PYTHON%\Scripts\cxfreeze –include-modules=queue,idna.idnadata
+                        –target-dir=build bin/svtplay-dl
+                    </li>
+                    <li>
+                        Find binary in build folder. you need svtplay-dl.exe and pythonXX.dll from
+                        that folder to run svtplay-dl.exe
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</Layout>

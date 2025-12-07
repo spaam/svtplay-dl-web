@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Code } from "astro:components";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+
+const pageTitle = "Tv4play";
+const description = "tv4play workaround to access content behind login";
+
+const javascript = `document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("tv4-refresh-token="))
+  ?.split("=")[1];`;
+
+const config = `service:
+  tv4play:
+    token: "ey..."
+`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faCirclePlay} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <h2 class="text-3xl">How to get a token for TV4 Play</h2>
+            Login to tv4play.se, then press <span class="text-pink-500">ctrl + shift + i</span> or <span
+                class="text-pink-500">F12</span
+            >, then press <span class="text-pink-500">console</span> tab.
+            <br />
+            <img src="/assets/console.png" alt="console" />
+            <br />
+
+            copy the code below and paste it in the text area next to the <span
+                class="text-pink-500">&gt;</span
+            > sign then press <span class="text-pink-500">enter</span>.
+            <main class="p-6">
+                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                    <Code theme="dark-plus" class="p-4" lang="bash" code={javascript} />
+                </div>
+            </main>
+
+            Copy that text that starts with <span class="text-pink-500">ey..</span><br />
+            then you can use it like this: <span class="text-pink-500"
+                >svtplay-dl --token "ey.." https://tv4play.se/..</span
+            >
+
+            or use put it in the <a href="/config" class="text-blue-500">config</a> like this for example
+
+            <main class="p-6">
+                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                    <Code theme="dark-plus" class="p-4" lang="bash" code={config} />
+                </div>
+            </main>
+        </div>
+    </div>
+</Layout>

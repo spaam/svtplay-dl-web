@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+
+const pageTitle = "Usage";
+const description = "How to use svtplay-dl";
+
+const downloadvideo = `# example, download the first episode of "Vår tid är nu"
+svtplay-dl https://www.svtplay.se/video/15367465/var-tid-ar-nu/var-tid-ar-nu-sasong-1-freden`;
+
+const downloadsubs = `# example, download one episode of "Hela england bakar" with subtitles
+svtplay-dl -S https://www.tv4play.se/program/hela-england-bakar/2287193`;
+
+const downloadallepisodes = `# example, download all episodes of "Vår tid är nu"
+svtplay-dl -A https://www.svtplay.se/video/15367465/var-tid-ar-nu/var-tid-ar-nu-sasong-1-freden
+
+# example, download all episodes and subtitles
+svtplay-dl -S -A https://www.svtplay.se/video/15367465/var-tid-ar-nu/var-tid-ar-nu-sasong-1-freden`;
+
+const listquality = `# example, view available qualities
+svtplay-dl --list-quality https://www.svtplay.se/video/eEqyADd/melodifestivalen/final
+INFO: Quality:  Method:  Codec:   Resolution:  Language:          Role:
+INFO: 7470      dash     h264-51  1920x1080    sv                 alternate-sign
+INFO: 7470      dash     h264-51  1920x1080    sv-x-tydligaretal  alternate-sign
+INFO: 7470      dash     h264-51  1920x1080    sv-x-tal           alternate-sign
+INFO: 7470      dash     h264-51  1920x1080    sv                 alternate-sign
+INFO: 7470      dash     h264-51  1920x1080    sv-x-tydligaretal  alternate-sign
+INFO: 7470      dash     h264-51  1920x1080    sv-x-tal           alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv                 alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv                 alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv                 alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 7217      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 7216      dash     h264     1920x1080    sv-x-tydligaretal  alternate-sign
+INFO: 7216      dash     h264     1920x1080    sv-x-tal           alternate-sign
+INFO: 7089      dash     h264     1920x1080    sv                 alternate-sign
+INFO: 7089      dash     h264     1920x1080    sv-x-tal           alternate-sign
+INFO: 7088      dash     h264     1920x1080    sv-x-tydligaretal  alternate-sign
+INFO: 7088      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 7056      dash     h264     1920x1080    sv                 alternate-sign
+INFO: 7056      dash     h264     1920x1080    sv-x-tydligaretal  alternate-sign
+INFO: 7056      dash     h264     1920x1080    sv-x-tal           alternate-sign
+INFO: 7056      dash     h264     1920x1080    sv-x-ad            alternate-sign
+INFO: 6355      dash     h264-51  1920x1080    sv                 main
+INFO: 6355      dash     h264-51  1920x1080    sv-x-tydligaretal  main
+INFO: 6355      dash     h264-51  1920x1080    sv-x-tal           main
+INFO: 6355      dash     h264-51  1920x1080    sv                 main
+INFO: 6355      dash     h264-51  1920x1080    sv-x-tydligaretal  main
+INFO: 6355      dash     h264-51  1920x1080    sv-x-tal           main
+INFO: 6102      dash     h264     1920x1080    sv                 main
+INFO: 6102      dash     h264     1920x1080    sv-x-ad            main
+INFO: 6102      dash     h264     1920x1080    sv                 main
+INFO: 6102      dash     h264     1920x1080    sv-x-ad            main
+INFO: 6102      dash     h264     1920x1080    sv                 main
+....`;
+
+const downloadotherquality = `# example, download HLS 988 quality
+svtplay-dl -P hls -q 988 -Q 100 https://url.to.video.page/`;
+
+const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0 language=eng -metadata:s:s:0 language=swe -c copy outfile.mkv`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faGraduationCap} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div>
+                After you successfully <a href="/install">installed svtplay-dl</a> on your computer. You
+                can dig into how to use it below.
+            </div>
+            <div class="text-3xl pt-4">Normal usage</div>
+            <div>
+                In most cases you just would like to download a video. Below we go through some
+                other scenarios as well.
+            </div>
+            <div class="font-medium pt-3">Download one video</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" lang="yaml" code={downloadvideo} />
+                    </div>
+                </main>
+            </span>
+            <div class="font-medium">Download one video with subtitles (-S)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" lang="yaml" code={downloadsubs} />
+                    </div>
+                </main>
+            </span>
+            <div class="font-medium">Download all episodes of a series (-A)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={downloadallepisodes}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div class="font-medium">View available Video stream qualities (–list-quality)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" lang="bash" code={listquality} />
+                    </div>
+                </main>
+            </span>
+            <div>
+                Quality is the bitrate in bit/s. 6355 kbit/s will have the Video quality of 1080p
+                resolution.
+            </div>
+            <div class="p-6">
+                <ul class="list-disc">
+                    <li>
+                        DASH aslo known as MPEG-DASH is an international standard for video
+                        streaming.
+                    </li>
+                    <li>HLS (Apple HTTP Live Streaming) Apple's protocol for video streaming.</li>
+                </ul>
+            </div>
+            <div>The default order of protocols svtplay-dl will use is: DASH, HLS, HDS.</div>
+            <div>
+                If you for instance like to use HLS instead of DASH, add the option{" "}
+                <span class="text-pink-500">-P hls</span>.
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">Download other video quality (-q -Q -P)</div>
+            <div>
+                You can also specify the quality you'd like to download, unless you want the best
+                quality.
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={downloadotherquality}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div>
+                The <span class="text-pink-500">-Q</span> flag is how much{" "}
+                <span class="text-pink-500">-q</span> can differ. The above example would look for HLS
+                Video with a bitrate between 888 and 1088 and take the one closest to 988.
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="text-2xl">See all arguemnts / options</div>
+            <div>
+                On the
+                <a href="/options" class="text-blue-500"> options </a>
+                page you can view all options available in svtplay-dl
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="text-2xl">Post processing</div>
+            <div>
+                In some cases you probably would like to change the media container of the video and
+                audio streams. For example from .ts and .srt to .mkv where you have the subtitles
+                included instead of two seperate files. FFmpeg is the swiss army knife for anything
+                with video and audio.
+            </div>
+            <div>
+                To merge video, audio and subtitles to one file without changing the quality (remux
+                only)
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" lang="bash" code={ffmpegpost} />
+                    </div>
+                </main>
+            </span>
+        </div>
+    </div>
+</Layout>

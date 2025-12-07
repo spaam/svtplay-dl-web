@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Code } from "astro:components";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+
+const pageTitle = "Aftonbladet";
+const description = "aftonbladet premium setup";
+const config = `service:
+  aftonbladet:
+    token: "ey..."
+`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faFolderOpen} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            Login to aftonbladet, press <span class="text-pink-500">ctrl + shift + i</span> or <span
+                class="text-pink-500">F12</span
+            >, then press <span class="text-pink-500">network</span> tab. then go to the aftonbladet plus
+            video, find the call <span class="text-pink-500">?access=plus</span> in the network tab.
+            <br />
+            <img src="/assets/network.png" />
+            <br />
+
+            go to the request headers and scroll down to the header:
+            <span class="text-pink-500">x-sp-id</span>
+            Copy that text that starts with <span class="text-pink-500">ey..</span><br />
+            <img src="/assets/headers.png" />
+            <br />
+
+            then you can use it like this:
+            <span class="text-pink-500"
+                >svtplay-dl --token "ey.." https://www.aftonbladet.se/..</span
+            >
+
+            or use put it in the <a href="/config" class="text-blue-500">config</a> like this for example
+
+            <main class="p-6">
+                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                    <Code theme="dark-plus" class="p-4" lang="bash" code={config} />
+                </div>
+            </main>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faApple,
+    faDocker,
+    faFreebsd,
+    faGithub,
+    faLinux,
+    faWindows,
+} from "@fortawesome/free-brands-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+
+const pageTitle = "Install";
+const description = "Installation instructions for svtplay-dl";
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faFolderOpen} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        Installing svtplay-dl is pretty simple. Follow the instuctions for your OS and you should be
+        up and running in no time.
+        <div class="mt-4">
+            <div class="border p-4 rounded-tl-lg rounded-tr-lg hover:bg-gray-100">
+                <a href="/install/linux/" class="text-3xl">
+                    Linux <FontAwesomeIcon icon={faLinux} />
+                </a>
+            </div>
+            <div class="border p-4 hover:bg-gray-100">
+                <a href="/install/macos/" class="text-3xl">
+                    macOS <FontAwesomeIcon icon={faApple} />
+                </a>
+            </div>
+            <div class="border p-4 hover:bg-gray-100">
+                <a href="/install/windows/" class="text-3xl">
+                    Windows <FontAwesomeIcon icon={faWindows} />
+                </a>
+            </div>
+            <div class="border p-4 hover:bg-gray-100">
+                <a href="/install/bsd/" class="text-3xl">
+                    BSD <FontAwesomeIcon icon={faFreebsd} />
+                </a>
+            </div>
+            <div class="border p-4 hover:bg-gray-100">
+                <a href="/install/docker/" class="text-3xl">
+                    Docker <FontAwesomeIcon icon={faDocker} />
+                </a>
+            </div>
+            <div class="border p-4 rounded-bl-lg rounded-br-lg hover:bg-gray-100">
+                <a href="/install/source/" class="text-3xl">
+                    From source <FontAwesomeIcon icon={faGithub} />
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>

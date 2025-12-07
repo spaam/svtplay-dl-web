@@ -1,0 +1,53 @@
+# --- Node & pnpm ---
+node_modules/
+pnpm-lock.yaml
+.pnpm-store/
+
+# --- Astro build output ---
+dist/
+.astro/
+
+# --- Environment & system files ---
+.env
+*.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# --- Build / cache / temp ---
+.cache/
+.tmp/
+.vite/
+.vercel/
+.netlify/
+
+# --- Astro content collections output ---
+# (these rarely need to be formatted)
+src/content/**/**/*.json
+
+# --- IDE / editor settings ---
+.vscode/
+.idea/
+
+# --- Prettier should NOT touch images or binaries ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+*.avif
+*.pdf
+*.zip
+
+# --- Optional: Ignore generated API schema / types ---
+# astro sync generates types here
+src/content/types.d.ts

@@ -1,0 +1,136 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+import { NavigationMenu } from "@layouts/navbar";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
+interface Props {
+    title: string;
+    description: string;
+}
+const { title, description } = Astro.props;
+const pagetitle = `svtplay-dl - ${title}`;
+---
+
+<html lang="en">
+    <head>
+        <SEO
+            title={pagetitle}
+            description={description}
+            openGraph={{
+                basic: {
+                    title: pagetitle,
+                    type: "article",
+                    image: "https://svtplay-dl.se/logo.png",
+                },
+                optional: {
+                    description: description,
+                },
+            }}
+            extend={{
+                meta: [
+                    {
+                        name: "twitter:image",
+                        content: "https://svtplay-dl.se/logo.png",
+                    },
+                    { name: "twitter:title", content: pagetitle },
+                    { name: "twitter:description", content: description },
+                ],
+            }}
+        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pagetitle}</title>
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="svtplay-dl" />
+        <link rel="manifest" href="/site.webmanifest" />
+        {
+            import.meta.env.PROD && (
+                <>
+                    <script
+                        async
+                        defer
+                        data-domain="svtplay-dl.se"
+                        src="https://metrics.i19.se/pls.js"
+                    />
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31DC2XP3C7" />
+                    <script
+                        set:html={`
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() {
+                                dataLayer.push(arguments);
+                            }
+                            gtag("js", new Date());
+                            gtag("config", "G-31DC2XP3C7");
+                            `}
+                    />
+                </>
+            )
+        }
+    </head>
+    <body class="antialiased text-base bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+        <div class="w-full max-w-7xl mx-auto px-4 flex-1 flex flex-col">
+            <header class="mb-8">
+                <div class="flex items-center justify-between w-full">
+                    <a
+                        href="/"
+                        class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-gray-100">
+                        <img src="/logo.svg" alt="Logo" width="24" height="24" />
+                        svtplay-dl
+                    </a>
+                    <NavigationMenu client:load />
+                </div>
+            </header>
+
+            <main class="flex-1">
+                <slot />
+            </main>
+
+            <footer class="bg-gray-300 dark:bg-gray-800 mt-8 rounded-lg shadow-sm">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 text-gray-900 dark:text-gray-100">
+                    <div>
+                        <div class="text-base font-medium mb-1">Chat</div>
+                        <a
+                            href="https://discord.gg/ytaUbWtAkB"
+                            class="text-sm text-blue-500 underline">
+                            Discord
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-base font-medium mb-1">Bugs and Issues</div>
+                        <a
+                            href="https://github.com/spaam/svtplay-dl/issues"
+                            class="text-sm text-blue-500 underline">
+                            Github
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-base font-medium mb-1">Contribute</div>
+                        <a
+                            href="https://discord.gg/ytaUbWtAkB"
+                            class="text-sm text-blue-500 underline">
+                            Github
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-base font-medium mb-1">License</div>
+                        <a
+                            href="https://github.com/spaam/svtplay-dl/blob/master/LICENSE"
+                            class="text-sm text-blue-500 underline">
+                            MIT
+                        </a>
+                        <br />© 2011-2025 Johan Andersson et al
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

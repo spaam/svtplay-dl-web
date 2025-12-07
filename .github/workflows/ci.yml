@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run lint
+        run: pnpm lint
+
+      - name: Run Prettier
+        run: npm exec prettier . --write
+
+      - name: Check for formatting changes
+        run: |
+          git diff --exit-code || (echo "Formatting changes detected:" && git diff && exit 1)
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: lint-and-format
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+      - name: Deploy with rsync
+        run: |
+          rsync -avz --delete dist/ web@${{ secrets.SSH_HOST }}:/var/www/website/
+
+      - name: Purge cache
+        uses: nathanvaughn/actions-cloudflare-purge@v4.0.0
+        with:
+          cf_zone: ${{ secrets.CLOUDFLARE_ZONE }}
+          cf_auth: ${{ secrets.CLOUDFLARE_AUTH_KEY }}

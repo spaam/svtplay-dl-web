@@ -1,0 +1,111 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDocker } from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Install on Docker";
+const description = "Installation instructions for svtplay-dl on Docker";
+
+const pullcontainer = `docker pull spaam/svtplay-dl`;
+const runcontainer = `docker run -it --rm  -u $(id -u):$(id -g)  -v "$(pwd):/data" spaam/svtplay-dl`;
+const bash = `alias svtplay-dl='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd):/data" spaam/svtplay-dl'`;
+const zsh = `alias svtplay-dl='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd):/data" spaam/svtplay-dl'`;
+const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):/data spaam/svtplay-dl'`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faDocker} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-3xl">Pull the container</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={pullcontainer}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div>
+                tags for each version since 2.1. there is also a tag for latest master called
+                <span class="text-pink-500">dev</span> see{" "}
+                <a href="https://hub.docker.com/r/spaam/svtplay-dl" class="text-blue-500">
+                    https://hub.docker.com/r/spaam/svtplay-dl
+                </a>
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={runcontainer}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div>or create an alias:</div>
+            <div>bash (~/.bashrc)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={bash}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div>zsh (~/.zshrc)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={zsh}
+                        />
+                    </div>
+                </main>
+            </span>
+            <div>fish (~/.config/fish/config.fish)</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code
+                            theme="dark-plus"
+                            class="p-4"
+                            theme="dark-plus"
+                            class="p-4"
+                            lang="bash"
+                            code={fish}
+                        />
+                    </div>
+                </main>
+            </span>
+        </div>
+    </div>
+</Layout>

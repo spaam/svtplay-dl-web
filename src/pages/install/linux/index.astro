@@ -1,0 +1,93 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinux } from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Install on Linux";
+const description = "Installation instructions for svtplay-dl on Linux";
+
+const anylinux = `# download with curl
+sudo curl -L https://svtplay-dl.se/download/latest/svtplay-dl -o /usr/local/bin/svtplay-dl
+
+# make it executable
+sudo chmod a+rx /usr/local/bin/svtplay-dl
+
+# Install ffmpeg via your package manager
+`;
+
+const debian = `# Add the PGP release keys:
+sudo curl -s https://svtplay-dl.se/release-key.txt --output /usr/share/keyrings/svtplay-dl.txt
+
+# Add the release channel to your APT sources:
+
+echo "deb [signed-by=/usr/share/keyrings/svtplay-dl.txt] https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
+
+# Update and install svtplay-dl and ffmpeg so it can merge audio and video files into one file:
+
+sudo apt update
+sudo apt install svtplay-dl ffmpeg`;
+
+const solus = `sudo eopkg it svtplay-dl`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faLinux} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-3xl">For any Linux</div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" code={anylinux} lang="bash" />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">Debian and Ubuntu</div>
+            <div>
+                The included repository in Debian and Ubuntu could sometimes be lagging behind. The
+                recommended way is to use our own
+                <a href="https://apt.svtplay-dl.se/" class="text-blue-500">repo</a>.
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" code={debian} lang="bash" />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">Solus</div>
+            <div>
+                svtplay-dl is avaliable in the stable repository of
+                <a href="https://getsol.us/" class="text-blue-500"> Solus </a> and can be installed by
+                running:
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" code={solus} lang="bash" />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">From source</div>
+            <div>
+                See the
+                <a href="/install/source/" class="text-blue-500"> Install from source </a>
+                page
+            </div>
+        </div>
+    </div>
+</Layout>

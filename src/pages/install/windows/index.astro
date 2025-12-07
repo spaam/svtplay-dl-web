@@ -1,0 +1,71 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWindows } from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Install on Windows";
+const description = "Installation instructions for svtplay-dl on Windows";
+
+const scoop = `scoop install svtplay-dl`;
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faWindows} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-3xl">Download</div>
+            <div>
+                You can download the latest release{" "}
+                <a href="/archive" class="text-blue-500">here</a>. Unzip and run svtplay-dl.exe from
+                a command prompt / terminal.
+            </div>
+            <div>
+                Then you should download
+                <a
+                    href="https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip"
+                    class="text-blue-500">
+                    ffmpeg
+                </a> and put <span class="text-pink-500">ffmpeg.exe</span> in the same folder as
+                <span class="text-pink-500">svtplay-dl.exe</span>. if you do that it will merge
+                audio and video file into one file.
+            </div>
+            <div class="italic mt-3">
+                If you'd like the latest bleeding edge build from the current master, you'll find it
+                here:
+            </div>
+            <div>
+                <a href="https://svtplay-dl.se/download/snapshots/" class="text-blue-500">
+                    https://svtplay-dl.se/download/snapshots/
+                </a>.
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">Scoop</div>
+            <div>
+                If you have
+                <a href="https://scoop.sh/" class="text-blue-500"> Scoop </a> installed you can install
+                with:
+            </div>
+            <span>
+                <main class="p-6">
+                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                        <Code theme="dark-plus" class="p-4" lang="bash" code={scoop} />
+                    </div>
+                </main>
+            </span>
+        </div>
+        <div class="mt-4">
+            <div class="text-3xl">From source</div>
+            <div>
+                See the <a href="/install/source/" class="text-blue-500"> Install from source </a> page
+            </div>
+        </div>
+    </div>
+</Layout>

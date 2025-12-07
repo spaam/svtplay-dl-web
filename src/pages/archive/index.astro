@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("posts"))
+    .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
+    .reverse();
+
+import { release_version } from "../../config.js";
+
+const pageTitle = "Download";
+const description = "download page";
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faDownload} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <p class="lead">
+            Before you download anything here, have a look at the <a
+                href="/install/"
+                class="text-blue-500">install page</a
+            > first.
+        </p>
+
+        There might be a better solution for you, than downloading a file from here.
+        <div class="p-4">
+            <ul class="list-disc">
+                <li>
+                    <a
+                        href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl`}
+                        class="text-blue-500">Latest (currently {release_version})</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl-amd64.zip`}
+                        class="text-blue-500"
+                        >Latest windows 64bit .exe (currently {release_version})</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl-win32.zip`}
+                        class="text-blue-500"
+                        >Latest windows 32bit .exe (currently {release_version})</a
+                    >
+                </li>
+            </ul>
+
+            <a href="/download/snapshots/" class="text-blue-500">Snapshots</a> created from each push.
+            it might be broken. use at your own risk.
+        </div>
+        <div>
+            <ul>
+                {
+                    posts.map((post) => (
+                        <li>
+                            <div class="border border-solid rounded-sm p-1">
+                                <a href={post.id}>
+                                    <div class="text-1g font-medium">{post.data.title}</div>
+                                    <div class="md-content" set:html={post.rendered?.html} />
+                                </a>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</Layout>

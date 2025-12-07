@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faDollar } from "@fortawesome/free-solid-svg-icons";
+import { faBitcoin, faEthereum, faPaypal } from "@fortawesome/free-brands-svg-icons";
+
+const pageTitle = "Donate";
+const description = "If you like this project, please donate!";
+---
+
+<Layout title={pageTitle} description={description}>
+    <div class="grid>">
+        <h1 class="text-4xl">
+            {pageTitle}
+            <FontAwesomeIcon icon={faDollar} />
+        </h1>
+        <hr class="mt-4 mb-4" />
+    </div>
+    <div class="text-xl">
+        <div class="mt-4">
+            <div class="text-xl">
+                You can donate via paypal <FontAwesomeIcon icon={faPaypal} />, ko-fi
+                <FontAwesomeIcon icon={faCoffee} />, bitcoin <FontAwesomeIcon icon={faBitcoin} /> or ethereum
+                <FontAwesomeIcon icon={faEthereum} />.
+            </div>
+            <div class="mt-4">
+                <ul>
+                    <li>
+                        paypal:
+                        <a href="https://www.paypal.me/spaam" class="text-blue-500">
+                            www.paypal.me/spaam
+                        </a>
+                    </li>
+                    <li>
+                        Ko-fi:
+                        <a href="https://ko-fi.com/spaam" class="text-blue-500">
+                            ko-fi.com/spaam
+                        </a>
+                    </li>
+                    <li>
+                        bitcoin: <span class="text-pink-500"
+                            >1KVavV3uyeVJeRwbw3UZ3sKUaAju3Le4y4</span
+                        >
+                    </li>
+                    <li>
+                        ethereum:{" "}
+                        <span class="text-pink-500">0x7e3A94705a5D0bEdFA3887C723c716A001B84CDe</span
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</Layout>

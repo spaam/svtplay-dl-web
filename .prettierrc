@@ -1,0 +1,23 @@
+{
+    "printWidth": 100,
+    "bracketSameLine": true,
+    "tabWidth": 4,
+    "plugins": ["prettier-plugin-astro"],
+    "overrides": [
+        {
+            "files": "*.astro",
+            "options": {
+                "parser": "astro"
+            }
+        },
+        {
+            "files": ["*.yaml", "*.yml"],
+            "options": {
+                "printWidth": 100,
+                "tabWidth": 2,
+                "singleQuote": false,
+                "proseWrap": "preserve"
+            }
+        }
+    ]
+}
