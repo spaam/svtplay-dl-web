@@ -63,7 +63,7 @@ const description = "download page";
                     posts.map((post) => (
                         <li>
                             <div class="border border-solid rounded-sm p-1">
-                                <a href={post.id}>
+                                <a href={`/${post.id}`}>
                                     <div class="text-1g font-medium">{post.data.title}</div>
                                     <div class="md-content" set:html={post.rendered?.html} />
                                 </a>
