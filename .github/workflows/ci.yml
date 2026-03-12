@@ -29,8 +29,8 @@ jobs:
       - name: Run lint
         run: pnpm lint
 
-      - name: Run Prettier
-        run: npm exec prettier . --write
+      - name: Run formatting
+        run: pnpm fmt
 
       - name: Check for formatting changes
         run: |

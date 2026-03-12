@@ -1,0 +1,51 @@
+{
+    "$schema": "./node_modules/oxfmt/configuration_schema.json",
+    "printWidth": 100,
+    "bracketSameLine": true,
+    "tabWidth": 4,
+    "sortPackageJson": false,
+    "ignorePatterns": [
+        "node_modules/",
+        "pnpm-lock.yaml",
+        ".pnpm-store/",
+        "dist/",
+        ".astro/",
+        ".env",
+        "*.env",
+        ".env.*",
+        ".DS_Store",
+        "Thumbs.db",
+        "npm-debug.log*",
+        "pnpm-debug.log*",
+        "yarn-debug.log*",
+        "yarn-error.log*",
+        "lerna-debug.log*",
+        ".cache/",
+        ".tmp/",
+        ".vite/",
+        ".vercel/",
+        ".netlify/",
+        "src/content/**/**/*.json",
+        ".vscode/",
+        ".idea/",
+        "*.png",
+        "*.jpg",
+        "*.jpeg",
+        "*.gif",
+        "*.svg",
+        "*.ico",
+        "*.webp",
+        "*.avif",
+        "*.pdf",
+        "*.zip",
+        "src/content/types.d.ts"
+    ],
+    "overrides": [
+        {
+            "files": ["*.yml"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}
