@@ -13,7 +13,7 @@
         "fmt:check": "oxfmt --check"
     },
     "dependencies": {
-        "@astrojs/prism": "^4.0.0",
+        "@astrojs/prism": "^4.0.1",
         "@astrojs/react": "^5.0.1",
         "@astrojs/sitemap": "^3.7.1",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",

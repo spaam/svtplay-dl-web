@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/prism':
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^4.0.1
+        version: 4.0.1
       '@astrojs/react':
         specifier: ^5.0.1
         version: 5.0.1(@types/node@25.0.3)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(yaml@2.8.2)
@@ -114,6 +114,10 @@ packages:
   '@astrojs/prism@4.0.0':
     resolution: {integrity: sha512-NndtNPpxaGinRpRytljGBvYHpTOwHycSZ/c+lQi5cHvkqqrHKWdkPEhImlODBNmbuB+vyQUNUDXyjzt66CihJg==}
     engines: {node: ^20.19.1 || >=22.12.0}
+
+  '@astrojs/prism@4.0.1':
+    resolution: {integrity: sha512-nksZQVjlferuWzhPsBpQ1JE5XuKAf1id1/9Hj4a9KG4+ofrlzxUUwX4YGQF/SuDiuiGKEnzopGOt38F3AnVWsQ==}
+    engines: {node: '>=22.12.0'}
 
   '@astrojs/react@5.0.1':
     resolution: {integrity: sha512-gJgQfDUxyePk+UIzwCEtAq04SGbziwRNwOMYvkxLHEtZScSMvRnvQhDWAEMCjLwwEomoT92Tfm34xpD7XAAzOg==}
@@ -2535,6 +2539,10 @@ snapshots:
       - supports-color
 
   '@astrojs/prism@4.0.0':
+    dependencies:
+      prismjs: 1.30.0
+
+  '@astrojs/prism@4.0.1':
     dependencies:
       prismjs: 1.30.0
 
