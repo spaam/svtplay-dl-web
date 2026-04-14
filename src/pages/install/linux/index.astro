@@ -18,11 +18,11 @@ sudo chmod a+rx /usr/local/bin/svtplay-dl
 `;
 
 const debian = `# Add the PGP release keys:
-sudo curl -s https://svtplay-dl.se/release-key.txt --output /usr/share/keyrings/svtplay-dl.txt
+sudo curl -s https://svtplay-dl.se/release-key.txt --output /usr/share/keyrings/svtplay-dl.asc
 
 # Add the release channel to your APT sources:
 
-echo "deb [signed-by=/usr/share/keyrings/svtplay-dl.txt] https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
+echo "deb [signed-by=/usr/share/keyrings/svtplay-dl.asc] https://apt.svtplay-dl.se/ svtplay-dl release" | sudo tee /etc/apt/sources.list.d/svtplay-dl.list
 
 # Update and install svtplay-dl and ffmpeg so it can merge audio and video files into one file:
 
