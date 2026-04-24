@@ -19,19 +19,19 @@
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
         "@fortawesome/free-brands-svg-icons": "^7.2.0",
         "@fortawesome/free-solid-svg-icons": "^7.2.0",
-        "@fortawesome/react-fontawesome": "^3.3.0",
-        "@tailwindcss/vite": "^4.2.2",
+        "@fortawesome/react-fontawesome": "^3.3.1",
+        "@tailwindcss/vite": "^4.2.4",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "astro": "^6.1.9",
         "astro-seo": "^1.1.0",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
-        "lucide-react": "^1.9.0",
+        "lucide-react": "^1.11.0",
         "react": "^19.2.5",
         "react-dom": "^19.2.5",
         "tailwind-merge": "^3.5.0",
-        "tailwindcss": "^4.2.2"
+        "tailwindcss": "^4.2.4"
     },
     "devDependencies": {
         "globals": "^17.5.0",
