@@ -43,4 +43,4 @@ you need to have `pnpm`
 then check if everything is fine with
 
 - `pnpm lint`
-- `npm exec prettier . --write` to format the files
+- `npm exec prettier . --write` to format the files.
