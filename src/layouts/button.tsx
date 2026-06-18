@@ -5,6 +5,7 @@ interface ButtonProps {
     size?: "sm" | "md" | "lg";
     children: ReactNode;
     className?: string;
+    href?: string;
     onClick?: () => void;
 }
 
@@ -13,6 +14,7 @@ export function Button({
     size = "md",
     children,
     className = "",
+    href,
     onClick,
 }: ButtonProps) {
     const baseStyles =
@@ -32,10 +34,18 @@ export function Button({
         lg: "px-6 py-3 text-lg",
     };
 
+    const cls = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+    if (href) {
+        return (
+            <a href={href} className={cls}>
+                {children}
+            </a>
+        );
+    }
+
     return (
-        <button
-            onClick={onClick}
-            className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}>
+        <button onClick={onClick} className={cls}>
             {children}
         </button>
     );
