@@ -12,7 +12,21 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-const description = `${post.id} release`;
+const releaseDate = post.data.date.toISOString().slice(0, 10);
+const changeSummary = (post.body ?? "")
+    .split("\n")
+    .map((line) => line.replace(/^[-*]\s+/, "").trim())
+    .map((line) => line.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"))
+    .filter(Boolean)
+    .join("; ");
+
+let description = changeSummary
+    ? `svtplay-dl ${post.data.title} (${releaseDate}) changelog: ${changeSummary}`
+    : `svtplay-dl ${post.data.title} release notes (${releaseDate}).`;
+
+if (description.length > 160) {
+    description = `${description.slice(0, 157).trimEnd()}...`;
+}
 const releases = [];
 if (post.data.categories == "releases") {
     if (post.data.binary) {
@@ -45,7 +59,7 @@ if (post.data.categories == "releases") {
 }
 ---
 
-<Layout title={post.data.title} description={description}>
+<Layout title={post.data.title} description={description} type="article">
     <div class="grid">
         <h1 class="text-4xl">
             {post.data.title}

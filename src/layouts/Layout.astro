@@ -10,8 +10,9 @@ config.autoAddCss = false;
 interface Props {
     title: string;
     description: string;
+    type?: "website" | "article";
 }
-const { title, description } = Astro.props;
+const { title, description, type = "website" } = Astro.props;
 const pagetitle = `svtplay-dl - ${title}`;
 ---
 
@@ -23,22 +24,25 @@ const pagetitle = `svtplay-dl - ${title}`;
             openGraph={{
                 basic: {
                     title: pagetitle,
-                    type: "article",
-                    image: "https://svtplay-dl.se/logo.png",
+                    type: type,
+                    image: "https://svtplay-dl.se/og-image.png",
                 },
                 optional: {
                     description: description,
+                    siteName: "svtplay-dl",
+                },
+                image: {
+                    width: 1200,
+                    height: 630,
+                    alt: "svtplay-dl",
                 },
             }}
-            extend={{
-                meta: [
-                    {
-                        name: "twitter:image",
-                        content: "https://svtplay-dl.se/logo.png",
-                    },
-                    { name: "twitter:title", content: pagetitle },
-                    { name: "twitter:description", content: description },
-                ],
+            twitter={{
+                card: "summary_large_image",
+                title: pagetitle,
+                description: description,
+                image: "https://svtplay-dl.se/og-image.png",
+                imageAlt: "svtplay-dl",
             }}
         />
         <meta charset="utf-8" />
