@@ -1,7 +1,7 @@
 ---
 import { SEO } from "astro-seo";
 import "../styles/global.css";
-import { NavigationMenu } from "@layouts/navbar";
+import NavigationMenu from "@layouts/navbar.astro";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -47,7 +47,6 @@ const pagetitle = `svtplay-dl - ${title}`;
         />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{pagetitle}</title>
         <link rel="sitemap" href="/sitemap-index.xml" />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -59,13 +58,19 @@ const pagetitle = `svtplay-dl - ${title}`;
             import.meta.env.PROD && (
                 <>
                     <script
+                        is:inline
                         async
                         defer
                         data-domain="svtplay-dl.se"
                         src="https://metrics.i19.se/pls.js"
                     />
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31DC2XP3C7" />
                     <script
+                        is:inline
+                        async
+                        src="https://www.googletagmanager.com/gtag/js?id=G-31DC2XP3C7"
+                    />
+                    <script
+                        is:inline
                         set:html={`
                             window.dataLayer = window.dataLayer || [];
                             function gtag() {
@@ -80,20 +85,26 @@ const pagetitle = `svtplay-dl - ${title}`;
         }
     </head>
     <body class="antialiased text-base bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+        <a
+            href="#main-content"
+            class="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:not-sr-only focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+            Skip to main content
+        </a>
         <div class="w-full max-w-7xl mx-auto px-4 flex-1 flex flex-col">
             <header class="mb-8">
                 <div class="flex items-center justify-between w-full">
                     <a
                         href="/"
                         class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-gray-100">
-                        <img src="/logo.svg" alt="Logo" width="24" height="24" />
+                        <img src="/logo.svg" alt="" aria-hidden="true" width="24" height="24" />
                         svtplay-dl
                     </a>
-                    <NavigationMenu client:load />
+                    <NavigationMenu />
                 </div>
             </header>
 
-            <main class="flex-1">
+            <main id="main-content" tabindex="-1" class="flex-1 focus:outline-none">
                 <slot />
             </main>
 
@@ -101,34 +112,34 @@ const pagetitle = `svtplay-dl - ${title}`;
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 text-gray-900 dark:text-gray-100">
                     <div>
-                        <div class="text-base font-medium mb-1">Chat</div>
+                        <h2 class="text-base font-medium mb-1">Chat</h2>
                         <a
                             href="https://discord.gg/ytaUbWtAkB"
-                            class="text-sm text-blue-500 underline">
+                            class="text-sm text-blue-700 underline hover:no-underline dark:text-blue-300">
                             Discord
                         </a>
                     </div>
                     <div>
-                        <div class="text-base font-medium mb-1">Bugs and Issues</div>
+                        <h2 class="text-base font-medium mb-1">Bugs and Issues</h2>
                         <a
                             href="https://github.com/spaam/svtplay-dl/issues"
-                            class="text-sm text-blue-500 underline">
+                            class="text-sm text-blue-700 underline hover:no-underline dark:text-blue-300">
                             Github
                         </a>
                     </div>
                     <div>
-                        <div class="text-base font-medium mb-1">Contribute</div>
+                        <h2 class="text-base font-medium mb-1">Contribute</h2>
                         <a
                             href="https://discord.gg/ytaUbWtAkB"
-                            class="text-sm text-blue-500 underline">
+                            class="text-sm text-blue-700 underline hover:no-underline dark:text-blue-300">
                             Github
                         </a>
                     </div>
                     <div>
-                        <div class="text-base font-medium mb-1">License</div>
+                        <h2 class="text-base font-medium mb-1">License</h2>
                         <a
                             href="https://github.com/spaam/svtplay-dl/blob/master/LICENSE"
-                            class="text-sm text-blue-500 underline">
+                            class="text-sm text-blue-700 underline hover:no-underline dark:text-blue-300">
                             MIT
                         </a>
                         <br />© 2011-2025 Johan Andersson et al

@@ -19,7 +19,7 @@ sudo chmod a+rx /usr/local/bin/svtplay-dl`;
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faApple} />
@@ -28,33 +28,33 @@ sudo chmod a+rx /usr/local/bin/svtplay-dl`;
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">With Homebrew</div>
+            <h2 class="text-3xl">With Homebrew</h2>
             <div>
                 If you have{" "}
-                <a href="https://brew.sh" class="text-blue-500"> Homebrew </a>{" "}
+                <a href="https://brew.sh" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Homebrew </a>{" "}
                 you can install with:
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code lang="bash" code={brew} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Download with curl</div>
+            <h2 class="text-3xl">Download with curl</h2>
             <div>
                 You have to deal with dependencies yourself and you need to install{" "}
-                <span class="text-pink-500">ffmpeg</span>
+                <span class="text-pink-700 dark:text-pink-300">ffmpeg</span>
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code lang="bash" code={curl} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

@@ -11,7 +11,7 @@ const scoop = `scoop install svtplay-dl`;
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faWindows} />
@@ -20,20 +20,20 @@ const scoop = `scoop install svtplay-dl`;
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">Download</div>
+            <h2 class="text-3xl">Download</h2>
             <div>
                 You can download the latest release{" "}
-                <a href="/archive" class="text-blue-500">here</a>. Unzip and run svtplay-dl.exe from
+                <a href="/archive" class="text-blue-700 underline hover:no-underline dark:text-blue-300">here</a>. Unzip and run svtplay-dl.exe from
                 a command prompt / terminal.
             </div>
             <div>
                 Then you should download
                 <a
                     href="https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip"
-                    class="text-blue-500">
+                    class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                     ffmpeg
-                </a> and put <span class="text-pink-500">ffmpeg.exe</span> in the same folder as
-                <span class="text-pink-500">svtplay-dl.exe</span>. if you do that it will merge
+                </a> and put <span class="text-pink-700 dark:text-pink-300">ffmpeg.exe</span> in the same folder as
+                <span class="text-pink-700 dark:text-pink-300">svtplay-dl.exe</span>. if you do that it will merge
                 audio and video file into one file.
             </div>
             <div class="italic mt-3">
@@ -41,30 +41,30 @@ const scoop = `scoop install svtplay-dl`;
                 here:
             </div>
             <div>
-                <a href="https://svtplay-dl.se/download/snapshots/" class="text-blue-500">
+                <a href="https://svtplay-dl.se/download/snapshots/" class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                     https://svtplay-dl.se/download/snapshots/
                 </a>.
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Scoop</div>
+            <h2 class="text-3xl">Scoop</h2>
             <div>
                 If you have
-                <a href="https://scoop.sh/" class="text-blue-500"> Scoop </a> installed you can install
+                <a href="https://scoop.sh/" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Scoop </a> installed you can install
                 with:
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={scoop} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">From source</div>
+            <h2 class="text-3xl">From source</h2>
             <div>
-                See the <a href="/install/source/" class="text-blue-500"> Install from source </a> page
+                See the <a href="/install/source/" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Install from source </a> page
             </div>
         </div>
     </div>

@@ -19,7 +19,7 @@ const config = `service:
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faCirclePlay} />
@@ -29,34 +29,42 @@ const config = `service:
     <div class="text-xl">
         <div class="mt-4">
             <h2 class="text-3xl">How to get a token for TV4 Play</h2>
-            Login to tv4play.se, then press <span class="text-pink-500">ctrl + shift + i</span> or <span
-                class="text-pink-500">F12</span
-            >, then press <span class="text-pink-500">console</span> tab.
+            Login to tv4play.se, then press <span class="text-pink-700 dark:text-pink-300">ctrl + shift + i</span> or <span
+                class="text-pink-700 dark:text-pink-300">F12</span
+            >, then press <span class="text-pink-700 dark:text-pink-300">console</span> tab.
             <br />
-            <img src="/assets/console.png" alt="console" />
+            <img
+                src="/assets/console.png"
+                alt="Browser developer tools with the Console tab highlighted"
+                width="415"
+                height="136"
+                loading="lazy"
+                decoding="async"
+                class="h-auto max-w-full"
+            />
             <br />
 
             copy the code below and paste it in the text area next to the <span
-                class="text-pink-500">&gt;</span
-            > sign then press <span class="text-pink-500">enter</span>.
-            <main class="p-6">
-                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                class="text-pink-700 dark:text-pink-300">&gt;</span
+            > sign then press <span class="text-pink-700 dark:text-pink-300">enter</span>.
+            <div class="p-6">
+                <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                     <Code theme="dark-plus" class="p-4" lang="bash" code={javascript} />
                 </div>
-            </main>
+            </div>
 
-            Copy that text that starts with <span class="text-pink-500">ey..</span><br />
-            then you can use it like this: <span class="text-pink-500"
+            Copy that text that starts with <span class="text-pink-700 dark:text-pink-300">ey..</span><br />
+            then you can use it like this: <span class="text-pink-700 dark:text-pink-300"
                 >svtplay-dl --token "ey.." https://tv4play.se/..</span
             >
 
-            or use put it in the <a href="/config" class="text-blue-500">config</a> like this for example
+            or use put it in the <a href="/config" class="text-blue-700 underline hover:no-underline dark:text-blue-300">config</a> like this for example
 
-            <main class="p-6">
-                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div class="p-6">
+                <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                     <Code theme="dark-plus" class="p-4" lang="bash" code={config} />
                 </div>
-            </main>
+            </div>
         </div>
     </div>
 </Layout>

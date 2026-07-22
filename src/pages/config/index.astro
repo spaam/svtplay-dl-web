@@ -48,7 +48,7 @@ const servicemore2 = `default:
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faSquareCheck} />
@@ -57,301 +57,301 @@ const servicemore2 = `default:
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">How to use configfile in svtplay-dl</div>
+            <h2 class="text-3xl">How to use configfile in svtplay-dl</h2>
             <div>
                 commandline argument to svtplay-dl will override the values from the config. the
                 script use yaml for the config.
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Path to config</div>
-            <div class="text-2xl">Current working directory</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <h2 class="text-3xl">Path to config</h2>
+            <h3 class="text-2xl">Current working directory</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={cwd} />
                     </div>
-                </main>
-            </span>
-            <div class="text-2xl">then it will check following</div>
-            <div class="text-2xl mt-4">
-                linux <FontAwesomeIcon icon={faLinux} /> / macOS <FontAwesomeIcon icon={faApple} />
+                </div>
             </div>
+            <h3 class="text-2xl">then it will check following</h3>
+            <h3 class="text-2xl mt-4">
+                linux <FontAwesomeIcon icon={faLinux} /> / macOS <FontAwesomeIcon icon={faApple} />
+            </h3>
             <div>it will check for the config in following order:</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={linuxapple} />
                     </div>
-                </main>
-            </span>
-            <div>ex /home/johan/.svtplay-dl.yaml</div>
-            <div class="text-2xl mt-4">
-                Windows <FontAwesomeIcon icon={faWindows} />
+                </div>
             </div>
+            <div>ex /home/johan/.svtplay-dl.yaml</div>
+            <h3 class="text-2xl mt-4">
+                Windows <FontAwesomeIcon icon={faWindows} />
+            </h3>
             <div>You need to create the directory under the appdata folder</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={windows} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>ex c:\users\johan\appdata\roaming\svtplay-dl\svtplay-dl.yaml</div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">keywords</div>
+            <h2 class="text-3xl">keywords</h2>
             <div class="p-6">
                 <ul class="list-disc">
                     <li>
-                        <span class="text-pink-500">all_episodes</span>: try to download all
+                        <span class="text-pink-700 dark:text-pink-300">all_episodes</span>: try to download all
                         episodes. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">all_last</span>: get last NN episodes instead of
+                        <span class="text-pink-700 dark:text-pink-300">all_last</span>: get last NN episodes instead of
                         all episodes: set to a number
                     </li>
                     <li>
-                        <span class="text-pink-500">chapters</span>: set to true to enable. Get
+                        <span class="text-pink-700 dark:text-pink-300">chapters</span>: set to true to enable. Get
                         chapters and add it to the file
                     </li>
                     <li>
-                        <span class="text-pink-500">convert_subtitle_colors</span>: converts the
+                        <span class="text-pink-700 dark:text-pink-300">convert_subtitle_colors</span>: converts the
                         color information in subtitles, to tags . set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">cookies</span>: A cookies to add to each HTTP
+                        <span class="text-pink-700 dark:text-pink-300">cookies</span>: A cookies to add to each HTTP
                         request. (cookie1=value;cookie2=value2)
                     </li>
                     <li>
-                        <span class="text-pink-500">exclude</span>: exclude videos with the WORD(s)
+                        <span class="text-pink-700 dark:text-pink-300">exclude</span>: exclude videos with the WORD(s)
                         in the filename. comma separated (eg kalle,anka)
                     </li>
                     <li>
-                        <span class="text-pink-500">filename</span>:
+                        <span class="text-pink-700 dark:text-pink-300">filename</span>:
                         &quot;&#123;title&#125;.s&#123;season&#125;e&#123;episode&#125;.&#123;episodename&#125;-&#123;id&#125;-&#123;service&#125;.&#123;ext&#125;&quot;
                         # you need &quot; before and after the text string
                     </li>
                     <li>
-                        <span class="text-pink-500">flexibleq</span>: allow given quality (as above)
+                        <span class="text-pink-700 dark:text-pink-300">flexibleq</span>: allow given quality (as above)
                         to differ by an amount
                     </li>
                     <li>
-                        <span class="text-pink-500">force_subtitle</span>: download only subtitle if
+                        <span class="text-pink-700 dark:text-pink-300">force_subtitle</span>: download only subtitle if
                         its used with subtitle
                     </li>
                     <li>
-                        <span class="text-pink-500">get_all_subtitles</span>: download all available
+                        <span class="text-pink-700 dark:text-pink-300">get_all_subtitles</span>: download all available
                         subtitles for the video. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">get_raw_subtitles</span>: also download the
+                        <span class="text-pink-700 dark:text-pink-300">get_raw_subtitles</span>: also download the
                         subtitles in their native format. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">get_url</span>: do not download any video, but
+                        <span class="text-pink-700 dark:text-pink-300">get_url</span>: do not download any video, but
                         instead print the URL. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">http_headers</span>: A header to add to each
+                        <span class="text-pink-700 dark:text-pink-300">http_headers</span>: A header to add to each
                         HTTP request (header1=value;header2=value2)
                     </li>
                     <li>
-                        <span class="text-pink-500">merge_subtitle</span>: merge subtitle with
+                        <span class="text-pink-700 dark:text-pink-300">merge_subtitle</span>: merge subtitle with
                         video/audio file with corresponding ISO639-3 language code. set to true to
                         enable
                     </li>
                     <li>
-                        <span class="text-pink-500">password</span>: what password to use
+                        <span class="text-pink-700 dark:text-pink-300">password</span>: what password to use
                     </li>
                     <li>
-                        <span class="text-pink-500">path</span>: output directory (ex
+                        <span class="text-pink-700 dark:text-pink-300">path</span>: output directory (ex
                         /path/to/directory)
                     </li>
                     <li>
-                        <span class="text-pink-500">preferred</span>: preferred download method
+                        <span class="text-pink-700 dark:text-pink-300">preferred</span>: preferred download method
                         (dash, hls or http)
                     </li>
                     <li>
-                        <span class="text-pink-500">format_preferred</span>: choose the format you
+                        <span class="text-pink-700 dark:text-pink-300">format_preferred</span>: choose the format you
                         prefer (h264, h265, h264-51). –list-quality will show which format is
                         available
                     </li>
                     <li>
-                        <span class="text-pink-500">proxy</span>: Use the specified HTTP/HTTPS/SOCKS
+                        <span class="text-pink-700 dark:text-pink-300">proxy</span>: Use the specified HTTP/HTTPS/SOCKS
                         proxy.
                     </li>
                     <li>
-                        <span class="text-pink-500">quality</span>: what quality it should download.
+                        <span class="text-pink-700 dark:text-pink-300">quality</span>: what quality it should download.
                     </li>
                     <li>
-                        <span class="text-pink-500">resolution</span>: choose what video resolution
+                        <span class="text-pink-700 dark:text-pink-300">resolution</span>: choose what video resolution
                         to download e.g. 480,720,1080.
                     </li>
                     <li>
-                        <span class="text-pink-500">remux</span>: set to true to enable
+                        <span class="text-pink-700 dark:text-pink-300">remux</span>: set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">require_subtitle</span>: download only if a
+                        <span class="text-pink-700 dark:text-pink-300">require_subtitle</span>: download only if a
                         subtitle is available. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">silent</span>: be less verbose. set to true to
+                        <span class="text-pink-700 dark:text-pink-300">silent</span>: be less verbose. set to true to
                         enable
                     </li>
                     <li>
-                        <span class="text-pink-500">silent_semi</span>: only show a message when the
+                        <span class="text-pink-700 dark:text-pink-300">silent_semi</span>: only show a message when the
                         file is downloaded. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">ssl_verify</span>: set to false if you dont want
+                        <span class="text-pink-700 dark:text-pink-300">ssl_verify</span>: set to false if you dont want
                         to verify the certificate
                     </li>
                     <li>
-                        <span class="text-pink-500">stream_prio</span>: If two streams have the same
+                        <span class="text-pink-700 dark:text-pink-300">stream_prio</span>: If two streams have the same
                         quality, choose the one you prefer (dash,hls,http)
                     </li>
                     <li>
-                        <span class="text-pink-500">subfolder</span>: sort downloaded files in
+                        <span class="text-pink-700 dark:text-pink-300">subfolder</span>: sort downloaded files in
                         subfolders. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">subtitle</span>: set to true to enable
+                        <span class="text-pink-700 dark:text-pink-300">subtitle</span>: set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">thumbnail</span>: download thumbnail from the
+                        <span class="text-pink-700 dark:text-pink-300">thumbnail</span>: download thumbnail from the
                         site if available. set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">username</span>: what username it should use
+                        <span class="text-pink-700 dark:text-pink-300">username</span>: what username it should use
                     </li>
                     <li>
-                        <span class="text-pink-500">verbose</span>: set to true to enable
+                        <span class="text-pink-700 dark:text-pink-300">verbose</span>: set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">only_audio</span>: set to true to enable
+                        <span class="text-pink-700 dark:text-pink-300">only_audio</span>: set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">only_video</span>: set to true to enable
+                        <span class="text-pink-700 dark:text-pink-300">only_video</span>: set to true to enable
                     </li>
                     <li>
-                        <span class="text-pink-500">audio_language</span>: Choose the language of
+                        <span class="text-pink-700 dark:text-pink-300">audio_language</span>: Choose the language of
                         the audio (it can override the default one), –list-quality to show which one
                         to choose from
                     </li>
                     <li>
-                        <span class="text-pink-500">output_format</span>: format you want resulting
+                        <span class="text-pink-700 dark:text-pink-300">output_format</span>: format you want resulting
                         file in (mkv or mp4), mp4 is default
                     </li>
                     <li>
-                        <span class="text-pink-500">token</span>: add a value for token
+                        <span class="text-pink-700 dark:text-pink-300">token</span>: add a value for token
                     </li>
                     <li>
-                        <span class="text-pink-500">reverse_list</span>: set to true for reverse
+                        <span class="text-pink-700 dark:text-pink-300">reverse_list</span>: set to true for reverse
                         download order
                     </li>
                      <li>
-                        <span class="text-pink-500">socket_timeout</span>: time to wait before giving up in seconds
+                        <span class="text-pink-700 dark:text-pink-300">socket_timeout</span>: time to wait before giving up in seconds
                     </li>
                      <li>
-                        <span class="text-pink-500">abort_on_error</span>: abort on error, it won't continue downloading more videos
+                        <span class="text-pink-700 dark:text-pink-300">abort_on_error</span>: abort on error, it won't continue downloading more videos
                     </li>    
                      <li>
-                        <span class="text-pink-500">tydligare_tal</span>: only download videos with 'tydligare tal' independent on language
+                        <span class="text-pink-700 dark:text-pink-300">tydligare_tal</span>: only download videos with 'tydligare tal' independent on language
                     </li>  
                 </ul>
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">filename</div>
+            <h2 class="text-3xl">filename</h2>
             <div class="p-6">
                 <ul class="list-disc">
                     <li>
-                        <span class="text-pink-500">&#123;title&#125;</span>: the title of the show
+                        <span class="text-pink-700 dark:text-pink-300">&#123;title&#125;</span>: the title of the show
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;season&#125;</span>: the season number
+                        <span class="text-pink-700 dark:text-pink-300">&#123;season&#125;</span>: the season number
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;episode&#125;</span>: the episode number
+                        <span class="text-pink-700 dark:text-pink-300">&#123;episode&#125;</span>: the episode number
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;episodename&#125;</span>: episode name
+                        <span class="text-pink-700 dark:text-pink-300">&#123;episodename&#125;</span>: episode name
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;id&#125;</span>: the id number
+                        <span class="text-pink-700 dark:text-pink-300">&#123;id&#125;</span>: the id number
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;service&#125;</span>: service name
+                        <span class="text-pink-700 dark:text-pink-300">&#123;service&#125;</span>: service name
                     </li>
                     <li>
-                        <span class="text-pink-500">&#123;ext&#125;</span>: the file extension
+                        <span class="text-pink-700 dark:text-pink-300">&#123;ext&#125;</span>: the file extension
                     </li>
                 </ul>
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Example configs:</div>
-            <div class="text-2xl font-medium">Simple</div>
+            <h2 class="text-3xl">Example configs:</h2>
+            <h3 class="text-2xl font-medium">Simple</h3>
             <div>
-                This will output all files to the folder <span class="text-pink-500"
+                This will output all files to the folder <span class="text-pink-700 dark:text-pink-300"
                     >~/grejgrej/</span
                 > in your home directory
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={simple} />
                     </div>
-                </main>
-            </span>
-            <div class="text-2xl font-medium">service</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3 class="text-2xl font-medium">service</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={service} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
                 This will output all files to the folder
-                <span class="text-pink-500">~/grejgrej/</span> in your home directory. if downloading
+                <span class="text-pink-700 dark:text-pink-300">~/grejgrej/</span> in your home directory. if downloading
                 a video from dplay. it will use
-                <span class="text-pink-500">user@example.tld</span> as username and
-                <span class="text-pink-500">superHemligt</span> as password
+                <span class="text-pink-700 dark:text-pink-300">user@example.tld</span> as username and
+                <span class="text-pink-700 dark:text-pink-300">superHemligt</span> as password
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={service} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
                 Downloading a video from svtplay will save the file to
-                <span class="text-pink-500">/storage/video/svtplay</span>, it will exclude every
+                <span class="text-pink-700 dark:text-pink-300">/storage/video/svtplay</span>, it will exclude every
                 file with a or b or c in the name and if the quality is between 837 and 1837. it
                 will write a filename without the id number in it.
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={serivcemore} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
                 This will download all episodes with subtitles and audio merged in to the video,
-                sort them in to subfolders within <span class="text-pink-500">~/svtplay-dl</span>
+                sort them in to subfolders within <span class="text-pink-700 dark:text-pink-300">~/svtplay-dl</span>
                 and finally write the file name without the service attached.
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={servicemore2} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

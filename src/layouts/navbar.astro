@@ -1,0 +1,77 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faBars,
+    faCircleInfo,
+    faDollarSign,
+    faDownload,
+    faFolderOpen,
+    faGear,
+    faGlobe,
+    faGraduationCap,
+    faHouse,
+    faSquareCheck,
+    type IconDefinition,
+} from "@fortawesome/free-solid-svg-icons";
+
+const links: { title: string; href: string; icon: IconDefinition }[] = [
+    { title: "Home", href: "/", icon: faHouse },
+    { title: "Install", href: "/install", icon: faFolderOpen },
+    { title: "Download", href: "/archive", icon: faDownload },
+    { title: "Usage", href: "/usage", icon: faGraduationCap },
+    { title: "Options", href: "/options", icon: faGear },
+    { title: "Config", href: "/config", icon: faSquareCheck },
+    { title: "Sites", href: "/sites", icon: faGlobe },
+    { title: "Donate", href: "/donate", icon: faDollarSign },
+    { title: "About", href: "/about", icon: faCircleInfo },
+];
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isCurrent = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+
+const linkClass =
+    "flex items-center gap-2 rounded-md px-3 py-2 font-medium transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:hover:bg-gray-700";
+---
+
+<nav aria-label="Primary navigation">
+    <div class="hidden items-center gap-1 lg:flex">
+        {
+            links.map((link) => (
+                <a
+                    href={link.href}
+                    class={linkClass}
+                    aria-current={isCurrent(link.href) ? "page" : undefined}
+                >
+                    <FontAwesomeIcon icon={link.icon} className="h-4 w-4" />
+                    {link.title}
+                </a>
+            ))
+        }
+    </div>
+
+    <details class="relative lg:hidden">
+        <summary
+            class="flex cursor-pointer list-none items-center gap-2 rounded-md px-4 py-2 font-medium transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:hover:bg-gray-700 [&::-webkit-details-marker]:hidden"
+        >
+            <FontAwesomeIcon icon={faBars} className="h-5 w-5" />
+            Menu
+        </summary>
+        <div
+            class="absolute right-0 z-50 mt-2 w-48 rounded-md bg-white p-2 shadow-lg dark:bg-gray-800"
+        >
+            {
+                links.map((link) => (
+                    <a
+                        href={link.href}
+                        class={linkClass}
+                        aria-current={isCurrent(link.href) ? "page" : undefined}
+                    >
+                        <FontAwesomeIcon icon={link.icon} className="h-4 w-4" />
+                        {link.title}
+                    </a>
+                ))
+            }
+        </div>
+    </details>
+</nav>

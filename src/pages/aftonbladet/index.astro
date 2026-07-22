@@ -14,7 +14,7 @@ const config = `service:
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faFolderOpen} />
@@ -23,32 +23,48 @@ const config = `service:
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            Login to aftonbladet, press <span class="text-pink-500">ctrl + shift + i</span> or <span
-                class="text-pink-500">F12</span
-            >, then press <span class="text-pink-500">network</span> tab. then go to the aftonbladet plus
-            video, find the call <span class="text-pink-500">?access=plus</span> in the network tab.
+            Login to aftonbladet, press <span class="text-pink-700 dark:text-pink-300">ctrl + shift + i</span> or <span
+                class="text-pink-700 dark:text-pink-300">F12</span
+            >, then press <span class="text-pink-700 dark:text-pink-300">network</span> tab. then go to the aftonbladet plus
+            video, find the call <span class="text-pink-700 dark:text-pink-300">?access=plus</span> in the network tab.
             <br />
-            <img src="/assets/network.png" />
+            <img
+                src="/assets/network.png"
+                alt="Browser developer tools with the Network tab and an access request highlighted"
+                width="369"
+                height="248"
+                loading="lazy"
+                decoding="async"
+                class="h-auto max-w-full"
+            />
             <br />
 
             go to the request headers and scroll down to the header:
-            <span class="text-pink-500">x-sp-id</span>
-            Copy that text that starts with <span class="text-pink-500">ey..</span><br />
-            <img src="/assets/headers.png" />
+            <span class="text-pink-700 dark:text-pink-300">x-sp-id</span>
+            Copy that text that starts with <span class="text-pink-700 dark:text-pink-300">ey..</span><br />
+            <img
+                src="/assets/headers.png"
+                alt="Request Headers panel with the x-sp-id header highlighted"
+                width="131"
+                height="611"
+                loading="lazy"
+                decoding="async"
+                class="h-auto max-w-full"
+            />
             <br />
 
             then you can use it like this:
-            <span class="text-pink-500"
+            <span class="text-pink-700 dark:text-pink-300"
                 >svtplay-dl --token "ey.." https://www.aftonbladet.se/..</span
             >
 
-            or use put it in the <a href="/config" class="text-blue-500">config</a> like this for example
+            or use put it in the <a href="/config" class="text-blue-700 underline hover:no-underline dark:text-blue-300">config</a> like this for example
 
-            <main class="p-6">
-                <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div class="p-6">
+                <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                     <Code theme="dark-plus" class="p-4" lang="bash" code={config} />
                 </div>
-            </main>
+            </div>
         </div>
     </div>
 </Layout>

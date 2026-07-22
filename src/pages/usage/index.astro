@@ -65,7 +65,7 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faGraduationCap} />
@@ -78,31 +78,31 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
                 After you successfully <a href="/install">installed svtplay-dl</a> on your computer. You
                 can dig into how to use it below.
             </div>
-            <div class="text-3xl pt-4">Normal usage</div>
+            <h2 class="text-3xl pt-4">Normal usage</h2>
             <div>
                 In most cases you just would like to download a video. Below we go through some
                 other scenarios as well.
             </div>
-            <div class="font-medium pt-3">Download one video</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <h3 class="font-medium pt-3">Download one video</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={downloadvideo} />
                     </div>
-                </main>
-            </span>
-            <div class="font-medium">Download one video with subtitles (-S)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3 class="font-medium">Download one video with subtitles (-S)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="yaml" code={downloadsubs} />
                     </div>
-                </main>
-            </span>
-            <div class="font-medium">Download all episodes of a series (-A)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3 class="font-medium">Download all episodes of a series (-A)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -110,16 +110,16 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
                             code={downloadallepisodes}
                         />
                     </div>
-                </main>
-            </span>
-            <div class="font-medium">View available Video stream qualities (–list-quality)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3 class="font-medium">View available Video stream qualities (–list-quality)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={listquality} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
                 Quality is the bitrate in bit/s. 6355 kbit/s will have the Video quality of 1080p
                 resolution.
@@ -136,18 +136,18 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
             <div>The default order of protocols svtplay-dl will use is: DASH, HLS, HDS.</div>
             <div>
                 If you for instance like to use HLS instead of DASH, add the option{" "}
-                <span class="text-pink-500">-P hls</span>.
+                <span class="text-pink-700 dark:text-pink-300">-P hls</span>.
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Download other video quality (-q -Q -P)</div>
+            <h2 class="text-3xl">Download other video quality (-q -Q -P)</h2>
             <div>
                 You can also specify the quality you'd like to download, unless you want the best
                 quality.
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -155,24 +155,24 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
                             code={downloadotherquality}
                         />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
-                The <span class="text-pink-500">-Q</span> flag is how much{" "}
-                <span class="text-pink-500">-q</span> can differ. The above example would look for HLS
+                The <span class="text-pink-700 dark:text-pink-300">-Q</span> flag is how much{" "}
+                <span class="text-pink-700 dark:text-pink-300">-q</span> can differ. The above example would look for HLS
                 Video with a bitrate between 888 and 1088 and take the one closest to 988.
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-2xl">See all arguemnts / options</div>
+            <h2 class="text-2xl">See all arguemnts / options</h2>
             <div>
                 On the
-                <a href="/options" class="text-blue-500"> options </a>
+                <a href="/options" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> options </a>
                 page you can view all options available in svtplay-dl
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-2xl">Post processing</div>
+            <h2 class="text-2xl">Post processing</h2>
             <div>
                 In some cases you probably would like to change the media container of the video and
                 audio streams. For example from .ts and .srt to .mkv where you have the subtitles
@@ -183,13 +183,13 @@ const ffmpegpost = `ffmpeg -i video.file.ts -i subtitle.file.srt -metadata:s:a:0
                 To merge video, audio and subtitles to one file without changing the quality (remux
                 only)
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" lang="bash" code={ffmpegpost} />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

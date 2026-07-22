@@ -9,11 +9,11 @@ const description =
 
 const components: { title: string; href: string }[] = [
     {
-        title: "PYPI",
+        title: "PyPI package status",
         href: "https://img.shields.io/pypi/status/svtplay-dl.svg",
     },
     {
-        title: "PYPI",
+        title: "Supported Python versions",
         href: "https://img.shields.io/pypi/pyversions/svtplay-dl.svg",
     },
     {
@@ -33,7 +33,7 @@ const components: { title: string; href: string }[] = [
         href: "https://img.shields.io/github/commit-activity/y/spaam/svtplay-dl.svg",
     },
     {
-        title: "PyPI",
+        title: "Latest PyPI version",
         href: "https://img.shields.io/pypi/v/svtplay-dl.svg",
     },
     {
@@ -64,6 +64,8 @@ const components: { title: string; href: string }[] = [
                             src={component.href}
                             class="h-5 w-auto inline-block"
                             alt={component.title}
+                            loading="lazy"
+                            decoding="async"
                         />
                     ))
                 }
@@ -71,13 +73,13 @@ const components: { title: string; href: string }[] = [
         </div>
         <div class="text-xl">
             Small command-line program written in
-            <a href="https://www.python.org" class="text-blue-500"> python </a>
+            <a href="https://www.python.org" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> python </a>
             to download videos from various
-            <a href="/sites" class="text-blue-500"> sites </a>.
+            <a href="/sites" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> sites </a>.
         </div>
         <div class="text-xl mt-4">
             Source code available in
-            <a href="https://github.com/spaam/svtplay-dl" class="text-blue-500"> GitHub </a>
+            <a href="https://github.com/spaam/svtplay-dl" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> GitHub </a>
         </div>
     </div>
 </Layout>

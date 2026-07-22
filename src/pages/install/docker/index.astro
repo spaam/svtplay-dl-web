@@ -15,7 +15,7 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faDocker} />
@@ -24,10 +24,10 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">Pull the container</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <h2 class="text-3xl">Pull the container</h2>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -37,18 +37,18 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
                             code={pullcontainer}
                         />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>
                 tags for each version since 2.1. there is also a tag for latest master called
-                <span class="text-pink-500">dev</span> see{" "}
-                <a href="https://hub.docker.com/r/spaam/svtplay-dl" class="text-blue-500">
+                <span class="text-pink-700 dark:text-pink-300">dev</span> see{" "}
+                <a href="https://hub.docker.com/r/spaam/svtplay-dl" class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                     https://hub.docker.com/r/spaam/svtplay-dl
                 </a>
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -58,13 +58,13 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
                             code={runcontainer}
                         />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
             <div>or create an alias:</div>
-            <div>bash (~/.bashrc)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <h3>bash (~/.bashrc)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -74,12 +74,12 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
                             code={bash}
                         />
                     </div>
-                </main>
-            </span>
-            <div>zsh (~/.zshrc)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3>zsh (~/.zshrc)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -89,12 +89,12 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
                             code={zsh}
                         />
                     </div>
-                </main>
-            </span>
-            <div>fish (~/.config/fish/config.fish)</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+                </div>
+            </div>
+            <h3>fish (~/.config/fish/config.fish)</h3>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -104,8 +104,8 @@ const fish = `alias svtplay-dl='docker run -it --rm -u (id -u):(id -g) -v (pwd):
                             code={fish}
                         />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

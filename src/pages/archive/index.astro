@@ -25,7 +25,7 @@ const description = `Download svtplay-dl ${release_version} for Linux, Windows, 
         <p class="lead">
             Before you download anything here, have a look at the <a
                 href="/install/"
-                class="text-blue-500">install page</a
+                class="text-blue-700 underline hover:no-underline dark:text-blue-300">install page</a
             > first.
         </p>
 
@@ -35,39 +35,52 @@ const description = `Download svtplay-dl ${release_version} for Linux, Windows, 
                 <li>
                     <a
                         href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl`}
-                        class="text-blue-500">Latest (currently {release_version})</a
+                        class="text-blue-700 underline hover:no-underline dark:text-blue-300">Latest (currently {release_version})</a
                     >
                 </li>
                 <li>
                     <a
                         href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl-amd64.zip`}
-                        class="text-blue-500"
+                        class="text-blue-700 underline hover:no-underline dark:text-blue-300"
                         >Latest windows 64bit .exe (currently {release_version})</a
                     >
                 </li>
                 <li>
                     <a
                         href={`https://svtplay-dl.se/download/${release_version}/svtplay-dl-win32.zip`}
-                        class="text-blue-500"
+                        class="text-blue-700 underline hover:no-underline dark:text-blue-300"
                         >Latest windows 32bit .exe (currently {release_version})</a
                     >
                 </li>
             </ul>
 
-            <a href="/download/snapshots/" class="text-blue-500">Snapshots</a> created from each push.
+            <a href="/download/snapshots/" class="text-blue-700 underline hover:no-underline dark:text-blue-300">Snapshots</a> created from each push.
             it might be broken. use at your own risk.
         </div>
         <div>
             <ul>
                 {
                     posts.map((post) => (
-                        <li>
-                            <div class="border border-solid rounded-sm p-1">
-                                <a href={`/${post.id}`}>
-                                    <div class="text-1g font-medium">{post.data.title}</div>
-                                    <div class="md-content" set:html={post.rendered?.html} />
-                                </a>
-                            </div>
+                        <li class="border-b border-gray-200 py-3 last:border-b-0 dark:border-gray-700">
+                            <article>
+                                <header>
+                                    <h2 class="text-lg font-medium">
+                                        <a href={`/${post.id}`} class="text-blue-600 hover:underline dark:text-blue-400">
+                                            svtplay-dl {post.data.title}
+                                        </a>
+                                    </h2>
+                                    <time
+                                        datetime={post.data.date.toISOString()}
+                                        class="mt-1 block text-sm text-gray-600 dark:text-gray-400"
+                                    >
+                                        {post.data.date.toISOString().slice(0, 10)}
+                                    </time>
+                                </header>
+                                <div
+                                    class="md-content mt-2 text-base text-gray-700 dark:text-gray-300"
+                                    set:html={post.rendered?.html}
+                                />
+                            </article>
                         </li>
                     ))
                 }

@@ -33,7 +33,7 @@ const solus = `sudo eopkg it svtplay-dl`;
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faLinux} />
@@ -42,50 +42,50 @@ const solus = `sudo eopkg it svtplay-dl`;
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">For any Linux</div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <h2 class="text-3xl">For any Linux</h2>
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" code={anylinux} lang="bash" />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Debian and Ubuntu</div>
+            <h2 class="text-3xl">Debian and Ubuntu</h2>
             <div>
                 The included repository in Debian and Ubuntu could sometimes be lagging behind. The
                 recommended way is to use our own
-                <a href="https://apt.svtplay-dl.se/" class="text-blue-500">repo</a>.
+                <a href="https://apt.svtplay-dl.se/" class="text-blue-700 underline hover:no-underline dark:text-blue-300">repo</a>.
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" code={debian} lang="bash" />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Solus</div>
+            <h2 class="text-3xl">Solus</h2>
             <div>
                 svtplay-dl is avaliable in the stable repository of
-                <a href="https://getsol.us/" class="text-blue-500"> Solus </a> and can be installed by
+                <a href="https://getsol.us/" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Solus </a> and can be installed by
                 running:
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code theme="dark-plus" class="p-4" code={solus} lang="bash" />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">From source</div>
+            <h2 class="text-3xl">From source</h2>
             <div>
                 See the
-                <a href="/install/source/" class="text-blue-500"> Install from source </a>
+                <a href="/install/source/" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Install from source </a>
                 page
             </div>
         </div>

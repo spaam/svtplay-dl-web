@@ -25,7 +25,7 @@ svtplay-dl --version`;
 ---
 
 <Layout title={pageTitle} description={description}>
-    <div class="grid>">
+    <div class="grid">
         <h1 class="text-4xl">
             {pageTitle}
             <FontAwesomeIcon icon={faGithub} />
@@ -34,19 +34,19 @@ svtplay-dl --version`;
     </div>
     <div class="text-xl">
         <div class="mt-4">
-            <div class="text-3xl">
+            <p class="text-3xl">
                 Installing svtplay-dl from source is pretty simple. Follow the instuctions for your
                 OS.
-            </div>
+            </p>
             <div>
                 For Linux <FontAwesomeIcon icon={faLinux} />, BSD <FontAwesomeIcon
                     icon={faFreebsd}
                 />, macOS{" "}
                 <FontAwesomeIcon icon={faApple} />
             </div>
-            <span>
-                <main class="p-6">
-                    <div class="rounded-xl overflow-hidden bg-2b2b2b text-sm">
+            <div>
+                <div class="p-6">
+                    <div class="rounded-xl overflow-x-auto bg-[#2b2b2b] text-sm">
                         <Code
                             theme="dark-plus"
                             class="p-4"
@@ -56,11 +56,11 @@ svtplay-dl --version`;
                             code={sourcegit}
                         />
                     </div>
-                </main>
-            </span>
+                </div>
+            </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">Prerequisites</div>
+            <h2 class="text-3xl">Prerequisites</h2>
             <div>
                 svtplay-dl requires the following additional tools and libraries. They are usually
                 available from your distribution's package repositories. If you don't have them,
@@ -69,62 +69,62 @@ svtplay-dl --version`;
             <div class="p-6">
                 <ul class="list-disc">
                     <li>
-                        <a href="https://www.python.org" class="text-blue-500"> Python </a>
+                        <a href="https://www.python.org" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> Python </a>
                         3.9 or higher
                     </li>
                     <li>
-                        <a href="http://www.python-requests.org/" class="text-blue-500">
+                        <a href="http://www.python-requests.org/" class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                             Requests
                         </a>
-                        <span class="text-pink-500">pip3 install requests</span>
+                        <span class="text-pink-700 dark:text-pink-300">pip3 install requests</span>
                     </li>
                     <li>
-                        <a href="https://cryptography.io/en/latest/" class="text-blue-500">
+                        <a href="https://cryptography.io/en/latest/" class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                             cryptography
                         </a>
                         to download encrypted HLS streams.
-                        <span class="text-pink-500">pip3 install cryptography</span>
+                        <span class="text-pink-700 dark:text-pink-300">pip3 install cryptography</span>
                     </li>
                     <li>
-                        <a href="https://github.com/yaml/pyyaml" class="text-blue-500"> PyYaml </a>
-                        for configure file. <span class="text-pink-500">pip3 install pyyaml</span>
+                        <a href="https://github.com/yaml/pyyaml" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> PyYaml </a>
+                        for configure file. <span class="text-pink-700 dark:text-pink-300">pip3 install pyyaml</span>
                     </li>
                     <li>
-                        <a href="https://github.com/Anorov/PySocks" class="text-blue-500">
+                        <a href="https://github.com/Anorov/PySocks" class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                             PySocks
                         </a>
-                        to enable proxy support. <span class="text-pink-500"
+                        to enable proxy support. <span class="text-pink-700 dark:text-pink-300"
                             >pip3 install pysocks</span
                         >
                     </li>
                     <li>
-                        <a href="https://ffmpeg.org/" class="text-blue-500"> ffmpeg </a>
+                        <a href="https://ffmpeg.org/" class="text-blue-700 underline hover:no-underline dark:text-blue-300"> ffmpeg </a>
                         to merge audio and video streams into one file
                     </li>
                 </ul>
             </div>
         </div>
         <div class="mt-4">
-            <div class="text-3xl">
+            <h2 class="text-3xl">
                 For Windows <FontAwesomeIcon icon={faWindows} />
-            </div>
+            </h2>
             <div class="p-6">
                 <ul class="list-disc">
                     <li>
                         Install
                         <a
                             href="https://cx-freeze.readthedocs.io/en/stable/index.html"
-                            class="text-blue-500">
+                            class="text-blue-700 underline hover:no-underline dark:text-blue-300">
                             cx_freeze
                         </a>
                     </li>
                     <li>
                         Clone the repository{" "}
-                        <span class="text-pink-500">https://github.com/spaam/svtplay-dl.git</span>
+                        <span class="text-pink-700 dark:text-pink-300">https://github.com/spaam/svtplay-dl.git</span>
                     </li>
                     <li>cd path\to\svtplay-dl && mkdir build</li>
                     <li>
-                        <span class="text-pink-500">pip install -e .</span>
+                        <span class="text-pink-700 dark:text-pink-300">pip install -e .</span>
                     </li>
                     <li>
                         python3 setversion.py # this will change the version string to a more useful
