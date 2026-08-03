@@ -104,12 +104,20 @@ const servicemore2 = `default:
             <div class="p-6">
                 <ul class="list-disc">
                     <li>
+                        <span class="text-pink-700 dark:text-pink-300">abort_on_error</span>: abort on error, it won't continue downloading more videos
+                    </li>
+                    <li>
                         <span class="text-pink-700 dark:text-pink-300">all_episodes</span>: try to download all
                         episodes. set to true to enable
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">all_last</span>: get last NN episodes instead of
                         all episodes: set to a number
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">audio_language</span>: Choose the language of
+                        the audio (it can override the default one), –list-quality to show which one
+                        to choose from
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">chapters</span>: set to true to enable. Get
@@ -141,6 +149,11 @@ const servicemore2 = `default:
                         its used with subtitle
                     </li>
                     <li>
+                        <span class="text-pink-700 dark:text-pink-300">format_preferred</span>: choose the format you
+                        prefer (h264, h265, h264-51). –list-quality will show which format is
+                        available
+                    </li>
+                    <li>
                         <span class="text-pink-700 dark:text-pink-300">get_all_subtitles</span>: download all available
                         subtitles for the video. set to true to enable
                     </li>
@@ -162,6 +175,16 @@ const servicemore2 = `default:
                         enable
                     </li>
                     <li>
+                        <span class="text-pink-700 dark:text-pink-300">only_audio</span>: set to true to enable
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">only_video</span>: set to true to enable
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">output_format</span>: format you want resulting
+                        file in (mkv or mp4), mp4 is default
+                    </li>
+                    <li>
                         <span class="text-pink-700 dark:text-pink-300">password</span>: what password to use
                     </li>
                     <li>
@@ -173,20 +196,11 @@ const servicemore2 = `default:
                         (dash, hls or http)
                     </li>
                     <li>
-                        <span class="text-pink-700 dark:text-pink-300">format_preferred</span>: choose the format you
-                        prefer (h264, h265, h264-51). –list-quality will show which format is
-                        available
-                    </li>
-                    <li>
                         <span class="text-pink-700 dark:text-pink-300">proxy</span>: Use the specified HTTP/HTTPS/SOCKS
                         proxy.
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">quality</span>: what quality it should download.
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">resolution</span>: choose what video resolution
-                        to download e.g. 480,720,1080.
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">remux</span>: set to true to enable
@@ -196,12 +210,23 @@ const servicemore2 = `default:
                         subtitle is available. set to true to enable
                     </li>
                     <li>
+                        <span class="text-pink-700 dark:text-pink-300">resolution</span>: choose what video resolution
+                        to download e.g. 480,720,1080.
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">reverse_list</span>: set to true for reverse
+                        download order
+                    </li>
+                    <li>
                         <span class="text-pink-700 dark:text-pink-300">silent</span>: be less verbose. set to true to
                         enable
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">silent_semi</span>: only show a message when the
                         file is downloaded. set to true to enable
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">socket_timeout</span>: time to wait before giving up in seconds
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">ssl_verify</span>: set to false if you dont want
@@ -223,42 +248,17 @@ const servicemore2 = `default:
                         site if available. set to true to enable
                     </li>
                     <li>
+                        <span class="text-pink-700 dark:text-pink-300">token</span>: add a value for token
+                    </li>
+                    <li>
+                        <span class="text-pink-700 dark:text-pink-300">tydligare_tal</span>: only download videos with 'tydligare tal' independent on language
+                    </li>
+                    <li>
                         <span class="text-pink-700 dark:text-pink-300">username</span>: what username it should use
                     </li>
                     <li>
                         <span class="text-pink-700 dark:text-pink-300">verbose</span>: set to true to enable
                     </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">only_audio</span>: set to true to enable
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">only_video</span>: set to true to enable
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">audio_language</span>: Choose the language of
-                        the audio (it can override the default one), –list-quality to show which one
-                        to choose from
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">output_format</span>: format you want resulting
-                        file in (mkv or mp4), mp4 is default
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">token</span>: add a value for token
-                    </li>
-                    <li>
-                        <span class="text-pink-700 dark:text-pink-300">reverse_list</span>: set to true for reverse
-                        download order
-                    </li>
-                     <li>
-                        <span class="text-pink-700 dark:text-pink-300">socket_timeout</span>: time to wait before giving up in seconds
-                    </li>
-                     <li>
-                        <span class="text-pink-700 dark:text-pink-300">abort_on_error</span>: abort on error, it won't continue downloading more videos
-                    </li>    
-                     <li>
-                        <span class="text-pink-700 dark:text-pink-300">tydligare_tal</span>: only download videos with 'tydligare tal' independent on language
-                    </li>  
                 </ul>
             </div>
         </div>
