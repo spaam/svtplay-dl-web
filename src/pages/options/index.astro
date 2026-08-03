@@ -8,11 +8,13 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 const pageTitle = "Options";
 const description = "All available options for svtplay-dl";
 
-const sourcegit = `usage: svtplay-dl [-h] [--version] [-o output] [--filename filename] [--subfolder] [--config configfile] [-f] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD] [--token TOKEN] [-t] [-g]
-                  [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2] [--exclude WORD1,WORD2,...] [--after-date yyyy-MM-dd]
-                  [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [-q quality] [-Q amount] [-P preferred] [--list-quality] [--stream-priority dash,hls,http] [--format-preferred h264,h264-51]
-                  [--audio-language AUDIO_LANGUAGE] [--video-role VIDEO_ROLE] [--resolution RESOLUTION] [-S] [-M] [--force-subtitle] [--require-subtitle] [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors]
-                  [-A] [--all-last NN] [--include-clips] [-R] [--no-remux] [--no-merge] [--no-postprocess] [--keep-original] [--output-format {mp4,mkv}] [--chapters]
+const sourcegit = `usage: svtplay-dl [-h] [--version] [-o output] [--filename filename] [--subfolder] [--config configfile] [-f] [-l] [-c capture_time] [-s] [--silent-semi] [-u USERNAME] [-p PASSWORD]
+                  [--token TOKEN] [-t] [-g] [--get-only-episode-url] [--dont-verify-ssl-cert] [--http-header header1=value;header2=value2] [--cookies cookie1=value;cookie2=value2]
+                  [--exclude WORD1,WORD2,...] [--after-date yyyy-MM-dd] [--proxy proxy] [-v] [--nfo] [--force-nfo] [--only-audio] [--only-video] [--socket-timeout SECONDS]
+                  [--max-retries N] [--abort-on-error] [--tydligare-tal] [-q quality] [-Q amount] [-P preferred] [--list-quality] [--stream-priority dash,hls,http]
+                  [--format-preferred h264,h264-51] [--audio-language AUDIO_LANGUAGE] [--video-role VIDEO_ROLE] [--resolution RESOLUTION] [-S] [-M] [--force-subtitle] [--require-subtitle]
+                  [--all-subtitles] [--raw-subtitles] [--convert-subtitle-colors] [-A] [--all-last NN] [--include-clips] [-R] [--no-remux] [--no-merge] [--no-postprocess] [--keep-original]
+                  [--output-format {mp4,mkv}] [--chapters]
                   [urls ...]
 
 positional arguments:
@@ -58,6 +60,11 @@ options:
   --force-nfo           download only NFO if used with --nfo
   --only-audio          only download audio if audio and video is seperated
   --only-video          only download video if audio and video is seperated
+  --socket-timeout SECONDS
+                        Time to wait before giving up in seconds
+  --max-retries N       Number of times to retry a failed download
+  --abort-on-error      Abort on error, it won't continue downloading more videos
+  --tydligare-tal       only download videos with 'tydligare tal' independent on language
 
 Quality:
   -q quality, --quality quality
