@@ -27,7 +27,7 @@
         "astro": "^7.3.5",
         "astro-seo": "^1.2.0",
         "clsx": "^2.1.1",
-        "lucide-react": "^1.49.0",
+        "lucide-react": "^1.55.0",
         "react": "^19.3.0",
         "react-dom": "^19.3.0",
         "tailwindcss": "^4.3.3",
